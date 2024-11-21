@@ -16,3 +16,14 @@
     🔹
     <a href="https://github.com/oreg0na/oreg0na.Portfolio/issues">Request Feature</a>
 </h3>
+
+## 🛠 Installation and Setup Instructions
+
+1. Installation: `npm install`
+
+2. In the project directory, you can run: `npm start`
+
+## Настройка экрана под 55-и дюймовый монитор:
+- 165% в Windows
+- 50% в Google Chrome (лупа)
+- F11
