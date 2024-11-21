@@ -1,0 +1,88 @@
+.faculty {
+    width: 1033px;
+    min-height: 370px;
+    background-color: #f9f9f9;
+    border-radius: 24px;
+    padding: 32px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+
+    .info {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-family: Rubik;
+        font-size: 24px;
+        padding: 16px 32px;
+        background-color: #fff;
+        border-radius: 32px;
+        color: #2b2b2b;
+    }
+
+    .topBlock {
+        justify-content: space-between;
+        gap: 32px;
+
+        .leftBlock {
+            flex-direction: column;
+            gap: 32px;
+
+            .infoBlock {
+                gap: 20px;
+
+                & > * {
+                    white-space: nowrap;
+                    background-color: #f0bc1a;
+                    color: #fff;
+                    font-weight: 700;
+                }
+            }
+
+            .textBlock {
+                flex-direction: column;
+                justify-content: center;
+                color: #2b2b2b;
+                gap: 8px;
+                flex: 1;
+
+                .subTitle {
+                    font-size: 20px;
+                }
+
+                .title {
+                    font-weight: 700;
+                    font-size: 40px;
+                }
+            }
+        }
+
+        .examsBlock {
+            gap: 12px;
+            flex-direction: column;
+
+            & > * {
+                width: 100%;
+                padding: 16px 32px;
+                border: 3px solid #f0bc1a;
+            }
+        }
+    }
+
+    .bottomBlock {
+        gap: 20px;
+
+        & > * {
+            flex: 1;
+        }
+
+        .newProfile {
+            background: #f0bc1a;
+            color: #fff;
+        }
+    }
+}
+
+.bigName {
+    flex: 1;
+}

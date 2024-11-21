@@ -1,0 +1,24 @@
+.testFirstPage {
+    flex-direction: column;
+    flex: 1;
+    gap: 64px;
+    align-items: center;
+
+    .title {
+        font-size: 96px;
+        font-weight: 700;
+    }
+
+    .filters {
+        flex: 1;
+        align-items: center;
+        width: 100%;
+        gap: 40px;
+
+        .filter {
+            height: max-content;
+            flex: 1;
+            padding: 290px 0;
+        }
+    }
+}

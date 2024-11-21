@@ -1,0 +1,34 @@
+.header {
+    align-items: center;
+    height: 368px;
+
+    .testButton {
+        padding: 40px 292px;
+        height: 155px;
+        font-size: 64px;
+        font-weight: 700;
+        background: #f0bc1a;
+        color: #fff;
+
+        .lion {
+            position: absolute;
+            width: 261px;
+            height: 213px;
+            top: -40px;
+            right: -20px;
+        }
+    }
+
+    .text {
+        font-size: 96px;
+        font-weight: 700;
+        margin-left: 146px;
+    }
+
+    .qr {
+        min-width: 308px;
+        max-width: 308px;
+        min-height: 308px;
+        max-height: 308px;
+    }
+}
