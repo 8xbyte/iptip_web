@@ -5,5 +5,14 @@
 <br/>
 
 <center>
+
 [![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com) &nbsp;
+
 </center>
+
+<h3 align="center">
+    🔹
+    <a href="https://github.com/oreg0na/oreg0na.Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
+    🔹
+    <a href="https://github.com/oreg0na/oreg0na.Portfolio/issues">Request Feature</a>
+</h3>
