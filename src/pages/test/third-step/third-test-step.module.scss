@@ -1,4 +1,4 @@
-.testFirstPage {
+.thirdTestStep {
     flex-direction: column;
     flex: 1;
     gap: 64px;
@@ -10,15 +10,15 @@
     }
 
     .filters {
-        flex: 1;
         align-items: center;
-        width: 100%;
         gap: 40px;
+        flex-wrap: wrap;
 
         .filter {
-            height: max-content;
-            flex: 1;
-            padding: 290px 0;
+            height: 562px;
+            width: 818px;
+            white-space: wrap;
+            padding: 168px;
         }
     }
 }

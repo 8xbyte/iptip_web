@@ -1,22 +1,10 @@
+import {
+    FirstTestFilterType,
+    HomeFilterType,
+    SecondTestFilterType,
+    ThirdTestFilterItemType
+} from '@/interfaces/filters'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-
-type HomeFilterType = 'Бакалавриат и специалитет' | 'Магистратура'
-
-type FirstTestFilterType = 'Бакалавриат и специалитет' | 'Магистратура'
-type SecondTestFilterType =
-    | 'IT-направление'
-    | 'Инженерное направление'
-    | 'Творческое направление'
-type ThirdTestFilterItemType =
-    | 'Информатика'
-    | 'Профильная математика'
-    | 'Русский язык'
-    | 'Химия'
-    | 'Английский язык'
-    | 'Творческий экзамен'
-    | 'Обществознание'
-    | 'Физика'
-    | 'История'
 
 interface IInitialState {
     homeFilter: HomeFilterType
@@ -51,11 +39,19 @@ const dataSlice = createSlice({
         ) => {
             state.secondTestFilter = action.payload
         },
-        setThirdTestFilter: (
+        addThirdTestFilter: (
             state,
-            action: PayloadAction<Array<ThirdTestFilterItemType>>
+            action: PayloadAction<ThirdTestFilterItemType>
         ) => {
-            state.thirdTestFilters = action.payload
+            state.thirdTestFilters = [...state.thirdTestFilters, action.payload]
+        },
+        removeThirdTestFilter: (
+            state,
+            action: PayloadAction<ThirdTestFilterItemType>
+        ) => {
+            state.thirdTestFilters = state.thirdTestFilters.filter(
+                (filter) => filter !== action.payload
+            )
         }
     }
 })
@@ -64,6 +60,7 @@ export const {
     setHomeNavigation,
     setFirstTestFilter,
     setSecondTestFilter,
-    setThirdTestFilter
+    addThirdTestFilter,
+    removeThirdTestFilter
 } = dataSlice.actions
 export default dataSlice

@@ -3,9 +3,9 @@ import Header from '@/components/header'
 import BackButton from '@/components/ui/back-button'
 import Block from '@/components/ui/block'
 import Filter from '@/components/ui/filter'
-import TestFirstStep from '@/pages/test/first-step'
-import TestSecondStep from '@/pages/test/second-step'
-import TestThirdStep from '@/pages/test/third-step'
+import FirstTestStep from '@/pages/test/first-step'
+import SecondTestStep from '@/pages/test/second-step'
+import ThirdTestStep from '@/pages/test/third-step'
 import Button from '@/components/ui/button'
 import React from 'react'
 
@@ -48,9 +48,9 @@ const TestPage: React.FC = () => {
                 </Filter>
             </Block>
             <Routes>
-                <Route path='1' element={<TestFirstStep />} />
-                <Route path='2' element={<TestSecondStep />} />
-                <Route path='3' element={<TestThirdStep />} />
+                <Route path='1' element={<FirstTestStep />} />
+                <Route path='2' element={<SecondTestStep />} />
+                <Route path='3' element={<ThirdTestStep />} />
                 <Route path='*' element={<Navigate to='/test/1' />} />
             </Routes>
             <Block className={styles.pagination}>
