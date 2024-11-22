@@ -23,16 +23,16 @@ const faculties: Array<IFaculty> = [
         },
         exams: [
             {
-                name: 'Информатика',
-                minScore: 47
-            },
-            {
                 name: 'Математика (профиль)',
                 minScore: 39
             },
             {
                 name: 'Русский язык',
                 minScore: 40
+            },
+            {
+                name: 'Информатика',
+                minScore: 47
             }
         ],
         willStudy: [
@@ -106,16 +106,16 @@ const faculties: Array<IFaculty> = [
         ],
         exams: [
             {
-                name: 'Информатика / Физика',
-                minScore: 44
-            },
-            {
                 name: 'Математика (профиль)',
                 minScore: 39
             },
             {
                 name: 'Русский язык',
                 minScore: 40
+            },
+            {
+                name: 'Информатика / Физика',
+                minScore: 44
             }
         ],
         willStudy: [
@@ -156,16 +156,16 @@ const faculties: Array<IFaculty> = [
         ],
         exams: [
             {
-                name: 'Информатика',
-                minScore: 44
-            },
-            {
                 name: 'Математика (профиль)',
                 minScore: 39
             },
             {
                 name: 'Русский язык',
                 minScore: 40
+            },
+            {
+                name: 'Информатика',
+                minScore: 44
             }
         ],
         willStudy: [
@@ -236,16 +236,16 @@ const faculties: Array<IFaculty> = [
         ],
         exams: [
             {
-                name: 'Физика',
-                minScore: 39
-            },
-            {
                 name: 'Математика (профиль)',
                 minScore: 39
             },
             {
                 name: 'Русский язык',
                 minScore: 40
+            },
+            {
+                name: 'Физика',
+                minScore: 39
             }
         ],
         willStudy: [
@@ -287,16 +287,16 @@ const faculties: Array<IFaculty> = [
         ],
         exams: [
             {
-                name: 'Информатика / Физика',
-                minScore: 44
-            },
-            {
                 name: 'Математика (профиль)',
                 minScore: 39
             },
             {
                 name: 'Русский язык',
                 minScore: 40
+            },
+            {
+                name: 'Информатика / Физика',
+                minScore: 44
             }
         ],
         willStudy: [
@@ -340,16 +340,16 @@ const faculties: Array<IFaculty> = [
         ],
         exams: [
             {
-                name: 'Химия / Физика',
-                minScore: 39
-            },
-            {
                 name: 'Математика (профиль)',
                 minScore: 39
             },
             {
                 name: 'Русский язык',
                 minScore: 40
+            },
+            {
+                name: 'Химия / Физика',
+                minScore: 39
             }
         ],
         willStudy: [
@@ -391,16 +391,16 @@ const faculties: Array<IFaculty> = [
         ],
         exams: [
             {
-                name: 'Творческий экзамен',
-                minScore: 30
-            },
-            {
                 name: 'Математика (профиль)',
                 minScore: 39
             },
             {
                 name: 'Русский язык',
                 minScore: 40
+            },
+            {
+                name: 'Творческий экзамен',
+                minScore: 30
             }
         ],
         willStudy: [
@@ -442,16 +442,16 @@ const faculties: Array<IFaculty> = [
         ],
         exams: [
             {
-                name: 'Физика',
-                minScore: 39
-            },
-            {
                 name: 'Математика (профиль)',
                 minScore: 39
             },
             {
                 name: 'Русский язык',
                 minScore: 40
+            },
+            {
+                name: 'Физика',
+                minScore: 39
             }
         ],
         willStudy: [
@@ -494,16 +494,16 @@ const faculties: Array<IFaculty> = [
         ],
         exams: [
             {
-                name: 'Информатика / Физика',
-                minScore: 44
-            },
-            {
                 name: 'Математика (профиль)',
                 minScore: 39
             },
             {
                 name: 'Русский язык',
                 minScore: 40
+            },
+            {
+                name: 'Информатика / Физика',
+                minScore: 44
             }
         ],
         willStudy: [
@@ -547,16 +547,16 @@ const faculties: Array<IFaculty> = [
         ],
         exams: [
             {
-                name: 'Англ. яз. / История / Обществознание',
-                minScore: 30
-            },
-            {
-                name: 'Творческий экзамен',
+                name: 'Математика (профиль)',
                 minScore: 30
             },
             {
                 name: 'Русский язык',
                 minScore: 40
+            },
+            {
+                name: 'Англ. яз. / История / Обществознание',
+                minScore: 30
             }
         ],
         willStudy: [
@@ -677,16 +677,16 @@ const faculties: Array<IFaculty> = [
         ],
         exams: [
             {
-                name: 'Информатика / Физика',
-                minScore: 44
-            },
-            {
                 name: 'Математика (профиль)',
                 minScore: 39
             },
             {
                 name: 'Русский язык',
                 minScore: 40
+            },
+            {
+                name: 'Информатика / Физика',
+                minScore: 44
             }
         ],
         willStudy: [
@@ -730,16 +730,16 @@ const faculties: Array<IFaculty> = [
         ],
         exams: [
             {
-                name: 'Физика',
-                minScore: 39
-            },
-            {
                 name: 'Математика (профиль)',
                 minScore: 39
             },
             {
                 name: 'Русский язык',
                 minScore: 40
+            },
+            {
+                name: 'Физика',
+                minScore: 39
             }
         ],
         willStudy: [
