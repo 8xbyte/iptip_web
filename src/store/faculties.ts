@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import FullstackDevelopmentQr from '@/assets/fullstack-development-qr.svg'
 import ComputerDesignQr from '@/assets/computer-design-qr.svg'
 import NanoelectronicsQr from '@/assets/nanoelectronics-qr.svg'
@@ -10,6 +11,10 @@ import PhysicsAndTechnologyOfNanosystemsQr from '@/assets/physics-and-technology
 import MixedRealityEnvironmentDesignQr from '@/assets/mixed-reality-environment-design-qr.svg'
 import OpticalElectronicInformationMeasuringQr from '@/assets/optical-electronic-information-measuring-qr.svg'
 import DigitalAndAdditiveTechnologiesInMechanicalEngineeringQr from '@/assets/digital-and-additive-technologies-in-mechanical-engineering-qr.svg'
+=======
+import FullstackQr from '@/assets/fullstack.svg'
+import KdQr from '@/assets/kd.svg'
+>>>>>>> 30a05a2d9e395731c63bad0c4a5eba552f9a933d
 
 import { IFaculty } from '@/interfaces/faculty'
 
@@ -65,16 +70,32 @@ const faculties: Array<IFaculty> = [
     {
         id: 2,
         passingScore: 258,
+<<<<<<< HEAD
         qrUrl: ComputerDesignQr,
+=======
+        qrUrl: KdQr,
+>>>>>>> 30a05a2d9e395731c63bad0c4a5eba552f9a933d
         type: 'Бакалавриат',
         date: '09.03.02',
         direction: 'IT-направление',
         institute: 'Информационные системы и технологии',
         name: 'Компьютерный дизайн',
+<<<<<<< HEAD
         price: 259500,
         budgetPlaces: 51,
         description:
             'В рамках профиля ведётся подготовка специалистов, которые знают, как оформлять проекты в медиа среде (разработка дизайна сайтов, промо-страниц, лэндингов), создавать логотипы, баннеры, инфографику и другие графические составляющие дизайна web-проекта',
+=======
+        price: 259000,
+        places: {
+            budget: 51,
+            specialQuota: 6,
+            separateQuota: 6
+        },
+        descriptions: [
+            'В рамках профиля ведётся подготовка специалистов, которые знают, как оформлять проекты в медиа среде (разработка дизайна сайтов, промо-страниц, лэндингов), создавать логотипы, баннеры, инфографику и другие графические составляющие дизайна web-проекта'
+        ],
+>>>>>>> 30a05a2d9e395731c63bad0c4a5eba552f9a933d
         exams: [
             [
                 {
@@ -114,9 +135,21 @@ const faculties: Array<IFaculty> = [
         institute: 'Электроника и наноэлектроника',
         name: 'Наноэлектроника',
         price: 240000,
+<<<<<<< HEAD
         budgetPlaces: 28,
         description:
             'В рамках профиля ведётся подготовка специалистов в сфере моделирования, проектирования, технологий изготовления современных элементов электроники. Такие специалисты умеют моделировать, проектировать, конструировать и эксплуатировать электронные приборы, устройства, установки различного функционального назначения',
+=======
+        places: {
+            budget: 38,
+            specialQuota: 3,
+            separateQuota: 3
+        },
+        descriptions: [
+            'В рамках профиля ведётся подготовка специалистов в сфере моделирования, проектирования, технологий изготовления современных элементов электроники. Они обладают знаниями в области современных технологий, материалов и изделий электронной техники',
+            'Такие специалисты умеют моделировать, проектировать, конструировать и эксплуатировать электронные приборы, устройства, установки различного функционального назначения'
+        ],
+>>>>>>> 30a05a2d9e395731c63bad0c4a5eba552f9a933d
         exams: [
             [
                 {
