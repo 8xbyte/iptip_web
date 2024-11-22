@@ -1,6 +1,7 @@
 .facultyPage {
     flex-direction: column;
     gap: 64px;
+    padding: 0 0 300px 0;
 
     .header {
         justify-content: space-between;
@@ -98,6 +99,7 @@
 
                 .description {
                     font-weight: 400;
+                    font-size: 48px;
                 }
             }
         }

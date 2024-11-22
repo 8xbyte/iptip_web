@@ -6,6 +6,7 @@ export type DirectionType =
 
 export interface IExam {
     name: string
+    shortName?: string
     minScore: number
 }
 
@@ -13,21 +14,16 @@ export interface IFaculty {
     id: number
     wide?: boolean
     qrUrl?: string
-    passingScore: number | null
+    passingScore?: number
     type: FacultyType
     date: string
     direction: DirectionType
     institute: string
     name: string
-    descriptions: Array<string>
-    price: number
-    places: {
-        budget: number
-        specialQuota: number
-        separateQuota: number
-    }
-    exams: Array<IExam>
-    willStudy: Array<string>
+    description: string
+    price?: number
+    budgetPlaces?: number
+    exams: Array<Array<IExam>>
     practicePlaces: Array<string>
     professions: Array<string>
 }

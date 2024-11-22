@@ -70,13 +70,15 @@ const TestResult: React.FC = () => {
             data.firstTestFilter === 'Бакалавриат и специалитет'
         ) {
             facultiesBuffer = facultiesBuffer.filter((faculty) => {
-                for (var exam of faculty.exams) {
-                    if (
-                        data.thirdTestFilters.includes(
-                            exam.name as ThirdTestFilterItemType
-                        )
-                    ) {
-                        return true
+                for (let exams of faculty.exams) {
+                    for (let exam of exams) {
+                        if (
+                            data.thirdTestFilters.includes(
+                                exam.name as ThirdTestFilterItemType
+                            )
+                        ) {
+                            return true
+                        }
                     }
                 }
 

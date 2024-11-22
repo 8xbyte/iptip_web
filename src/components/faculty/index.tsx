@@ -19,7 +19,7 @@ const Faculty: React.FC<IFacultyProps> = ({ faculty, wide = false }) => {
         <Block
             className={[
                 styles.faculty,
-                faculty.wide && wide ? styles.bigName : null
+                faculty.wide && wide ? styles.wide : null
             ].join(' ')}
             onClick={() => navigate(`/faculties/${faculty.id}`)}
         >
@@ -39,9 +39,11 @@ const Faculty: React.FC<IFacultyProps> = ({ faculty, wide = false }) => {
                     </Block>
                 </Block>
                 <Block className={styles.examsBlock}>
-                    {faculty.exams.map((exam, index) => (
+                    {faculty.exams.map((exams, index) => (
                         <Block key={index} className={styles.info}>
-                            {exam.name}
+                            {exams
+                                .map((exam) => exam.shortName ?? exam.name)
+                                .join(' / ')}
                         </Block>
                     ))}
                 </Block>
@@ -59,7 +61,7 @@ const Faculty: React.FC<IFacultyProps> = ({ faculty, wide = false }) => {
                 </Block>
                 {faculty.passingScore ? (
                     <Block className={styles.info}>
-                        {faculty.places.budget} — бюджетных мест
+                        {faculty.budgetPlaces} — бюджетных мест
                     </Block>
                 ) : null}
             </Block>

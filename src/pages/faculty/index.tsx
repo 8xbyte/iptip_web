@@ -41,10 +41,18 @@ const FacultyPage: React.FC = () => {
             <Block className={styles.header}>
                 <BackButton onClick={() => navigate('/home')} />
                 <Block className={styles.filters}>
-                    <Filter className={styles.filter}>
-                        {faculty.passingScore}
-                        <Text className={styles.text}> — проходной балл</Text>
-                    </Filter>
+                    {faculty.passingScore ? (
+                        <Filter className={styles.filter}>
+                            {faculty.passingScore}
+                            <Text className={styles.text}>
+                                — проходной балл
+                            </Text>
+                        </Filter>
+                    ) : (
+                        <Filter className={styles.filter}>
+                            <Text className={styles.text}>Новый профиль</Text>
+                        </Filter>
+                    )}
                     <Filter className={styles.filter}>
                         <Text className={styles.text}>{faculty.type}</Text>
                     </Filter>
@@ -59,67 +67,93 @@ const FacultyPage: React.FC = () => {
                         {faculty.institute}
                     </Text>
                     <Text className={styles.bold}>{faculty.name}</Text>
-                    {faculty.descriptions.map((text) => (
-                        <Text className={styles.description}>{text}</Text>
-                    ))}
+                    <Text className={styles.description}>
+                        {faculty.description}
+                    </Text>
                 </Block>
                 <Block className={[styles.block, styles.rightBlock].join(' ')}>
                     <Block className={styles.filters}>
-                        <Filter selected className={styles.filter}>
-                            от 288 000 ₽ *
-                            <Text className={styles.text}>
-                                cтоимость обучения
-                            </Text>
-                        </Filter>
-                        <Filter selected className={styles.filter}>
-                            140 *
-                            <Text className={styles.text}>бюджетных мест</Text>
-                        </Filter>
+                        {faculty.price ? (
+                            <Filter selected className={styles.filter}>
+                                от 288 000 ₽ *
+                                <Text className={styles.text}>
+                                    cтоимость обучения
+                                </Text>
+                            </Filter>
+                        ) : null}
+                        {faculty.budgetPlaces ? (
+                            <Filter selected className={styles.filter}>
+                                140 *
+                                <Text className={styles.text}>
+                                    бюджетных мест
+                                </Text>
+                            </Filter>
+                        ) : null}
                     </Block>
-                    <Text className={styles.description}>
-                        *Данные на 2024 г. <br /> Актуальные данные появятся в
-                        январе 2025 г.
-                    </Text>
+                    {faculty.budgetPlaces && faculty.price ? (
+                        <Text className={styles.description}>
+                            *Данные на 2024 г. <br /> Актуальные данные появятся
+                            в январе 2025 г.
+                        </Text>
+                    ) : null}
                 </Block>
             </Block>
             <Block className={styles.examsBlock}>
                 <Text className={styles.title}>Вступительные испытания</Text>
                 <Block className={styles.filters}>
-                    {faculty.exams.map((exam) => (
+                    {faculty.exams.map((exams) => (
                         <Filter selected className={styles.filter}>
-                            {exam.name}{' '}
+                            {exams.map((exam) => exam.name).join(' / ')}
                             <Text className={styles.description}>
-                                от {exam.minScore} баллов
+                                {exams
+                                    .map((exam) => `от ${exam.minScore} баллов`)
+                                    .join(' / ')}
                             </Text>
                         </Filter>
                     ))}
                 </Block>
             </Block>
             <Block className={styles.additionalInfoBlock}>
-                <Block className={[styles.block, styles.leftBlock].join(' ')}>
-                    <Text className={styles.title}>Что вы будете изучать</Text>
-                    <Image className={styles.image} src={faculty.qrUrl} />
-                </Block>
-                <Block className={[styles.block, styles.middleBlock].join(' ')}>
-                    <Text className={styles.title}>
-                        Основные места прохождения практик
-                    </Text>
-                    <Block className={styles.list}>
-                        {faculty.practicePlaces.map((place) => (
-                            <Text className={styles.item}>{place}</Text>
-                        ))}
+                {faculty.qrUrl ? (
+                    <Block
+                        className={[styles.block, styles.leftBlock].join(' ')}
+                    >
+                        <Text className={styles.title}>
+                            Что вы будете изучать
+                        </Text>
+                        <Image className={styles.image} src={faculty.qrUrl} />
                     </Block>
-                </Block>
-                <Block className={[styles.block, styles.rightBlock].join(' ')}>
-                    <Text className={styles.title}>
-                        Профессии, которые могут выбрать выпускники
-                    </Text>
-                    <Block className={styles.list}>
-                        {faculty.professions.map((profession) => (
-                            <Text className={styles.item}>{profession}</Text>
-                        ))}
+                ) : null}
+                {faculty.practicePlaces.length ? (
+                    <Block
+                        className={[styles.block, styles.middleBlock].join(' ')}
+                    >
+                        <Text className={styles.title}>
+                            Основные места прохождения практик
+                        </Text>
+                        <Block className={styles.list}>
+                            {faculty.practicePlaces.map((place) => (
+                                <Text className={styles.item}>{place}</Text>
+                            ))}
+                        </Block>
                     </Block>
-                </Block>
+                ) : null}
+                {faculty.professions.length ? (
+                    <Block
+                        className={[styles.block, styles.rightBlock].join(' ')}
+                    >
+                        <Text className={styles.title}>
+                            Профессии, которые могут выбрать выпускники
+                        </Text>
+                        <Block className={styles.list}>
+                            {faculty.professions.map((profession) => (
+                                <Text className={styles.item}>
+                                    {profession}
+                                </Text>
+                            ))}
+                        </Block>
+                    </Block>
+                ) : null}
             </Block>
         </Block>
     ) : null
