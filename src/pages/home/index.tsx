@@ -57,7 +57,7 @@ const HomePage: React.FC = () => {
                             )
                             .sort((first, second) => first.id - second.id)
                             .map((faculty, index) => (
-                                <Faculty key={index} faculty={faculty} />
+                                <Faculty wide key={index} faculty={faculty} />
                             ))}
                     </Block>
                 </Block>

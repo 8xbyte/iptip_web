@@ -1,0 +1,50 @@
+.testSteps {
+    flex-direction: column;
+    flex: 1;
+
+    .header {
+        justify-content: space-between;
+        gap: 64px;
+
+        .filter {
+            padding: 52px 292px;
+        }
+    }
+
+    .pagination {
+        justify-content: space-between;
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .pageButton {
+            background: #f9f9f9;
+            border-radius: 116px;
+            padding: 29px 64px;
+
+            .arrow {
+                transform: rotate(180deg);
+            }
+        }
+
+        .pageBlock {
+            gap: 64px;
+            align-items: center;
+
+            .separator {
+                font-weight: 700;
+                font-size: 96px;
+            }
+
+            .page {
+                font-weight: 700;
+                background: #f9f9f9;
+                padding: 51px 64px;
+                border-radius: 32px;
+                font-size: 64px;
+                font-family: Rubik;
+            }
+        }
+    }
+}

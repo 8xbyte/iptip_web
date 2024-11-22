@@ -1,0 +1,25 @@
+.testResult {
+    flex-direction: column;
+    gap: 64px;
+
+    .title {
+        font-weight: 700;
+        font-size: 96px;
+        color: #767676;
+    }
+
+    .filters {
+        gap: 32px;
+        flex-wrap: wrap;
+
+        .filter {
+            font-size: 40px;
+            padding: 16px 32px;
+        }
+    }
+
+    .list {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}

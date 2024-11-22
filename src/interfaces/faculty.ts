@@ -11,7 +11,8 @@ export interface IExam {
 
 export interface IFaculty {
     id: number
-    bigName?: boolean
+    wide?: boolean
+    qrUrl?: string
     passingScore: number | null
     type: FacultyType
     date: string

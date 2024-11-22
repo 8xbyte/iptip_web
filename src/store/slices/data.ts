@@ -45,6 +45,9 @@ const dataSlice = createSlice({
         ) => {
             state.thirdTestFilters = [...state.thirdTestFilters, action.payload]
         },
+        clearThirdTestFilters: (state) => {
+            state.thirdTestFilters = []
+        },
         removeThirdTestFilter: (
             state,
             action: PayloadAction<ThirdTestFilterItemType>
@@ -61,6 +64,7 @@ export const {
     setFirstTestFilter,
     setSecondTestFilter,
     addThirdTestFilter,
+    clearThirdTestFilters,
     removeThirdTestFilter
 } = dataSlice.actions
 export default dataSlice

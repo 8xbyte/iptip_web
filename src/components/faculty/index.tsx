@@ -9,16 +9,17 @@ import * as styles from './faculty.module.scss'
 
 export interface IFacultyProps {
     faculty: IFaculty
+    wide?: boolean
 }
 
-const Faculty: React.FC<IFacultyProps> = ({ faculty }) => {
+const Faculty: React.FC<IFacultyProps> = ({ faculty, wide = false }) => {
     const navigate = useNavigate()
 
     return (
         <Block
             className={[
                 styles.faculty,
-                faculty.bigName ? styles.bigName : null
+                faculty.wide && wide ? styles.bigName : null
             ].join(' ')}
             onClick={() => navigate(`/faculties/${faculty.id}`)}
         >

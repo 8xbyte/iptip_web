@@ -24,7 +24,7 @@ const SecondTestStep: React.FC = () => {
                     selected={data.secondTestFilter === 'IT-направление'}
                     className={styles.filter}
                 >
-                    Инженерное направление
+                    IT-направление
                 </Filter>
                 <Filter
                     onClick={() =>

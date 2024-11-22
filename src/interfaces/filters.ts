@@ -15,4 +15,3 @@ export type ThirdTestFilterItemType =
     | 'Обществознание'
     | 'Физика'
     | 'История'
-    | 'Без ответа'

@@ -4,7 +4,11 @@ import Text from '@/components/ui/text'
 import Filter from '@/components/ui/filter'
 
 import { useAppDispatch, useAppSelector } from '@/store'
-import { addThirdTestFilter, removeThirdTestFilter } from '@/store/slices/data'
+import {
+    addThirdTestFilter,
+    clearThirdTestFilters,
+    removeThirdTestFilter
+} from '@/store/slices/data'
 
 import * as styles from './third-test-step.module.scss'
 import { ThirdTestFilterItemType } from '@/interfaces/filters'
@@ -94,8 +98,8 @@ const ThirdTestStep: React.FC = () => {
                     История
                 </Filter>
                 <Filter
-                    onClick={() => clickFilterHandler('Без ответа')}
-                    selected={selectedFilter('Без ответа')}
+                    onClick={() => dispatch(clearThirdTestFilters())}
+                    selected={data.thirdTestFilters.length === 0}
                     className={styles.filter}
                 >
                     Без ответа

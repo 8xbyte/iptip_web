@@ -1,4 +1,158 @@
 .facultyPage {
     flex-direction: column;
     gap: 64px;
+
+    .header {
+        justify-content: space-between;
+
+        .filters {
+            gap: 40px;
+
+            .filter {
+                width: 1390px;
+                height: 179px;
+                font-size: 96px;
+                gap: 16px;
+
+                .text {
+                    font-weight: 700;
+                    font-size: 64px;
+                }
+            }
+        }
+    }
+
+    .infoBlock {
+        gap: 305px;
+        border-radius: 32px;
+        background: #f9f9f9;
+        padding: 40px;
+        justify-content: space-between;
+
+        .block {
+            flex-direction: column;
+
+            .bold {
+                font-weight: 700;
+                font-size: 64px;
+                color: #2b2b2b;
+            }
+
+            .description {
+                font-size: 48px;
+                color: #757575;
+            }
+        }
+
+        .leftBlock {
+            gap: 20px;
+        }
+
+        .rightBlock {
+            justify-content: space-between;
+
+            .filters {
+                gap: 40px;
+
+                .filter {
+                    flex-direction: column;
+                    width: 703px;
+                    height: 228px;
+                    gap: 16px;
+
+                    .text {
+                        font-weight: 400;
+                        font-size: 48px;
+                    }
+                }
+            }
+
+            .description {
+                font-size: 36px;
+                color: #757575;
+            }
+        }
+    }
+
+    .examsBlock {
+        flex-direction: column;
+        gap: 40px;
+
+        .title {
+            font-weight: 700;
+            font-size: 64px;
+            color: #2b2b2b;
+        }
+
+        .filters {
+            gap: 40px;
+
+            .filter {
+                flex-direction: column;
+                padding: 40px 0;
+                flex: 1;
+
+                .description {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .additionalInfoBlock {
+        gap: 40px;
+
+        .block {
+            flex-direction: column;
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 24px;
+            gap: 40px;
+
+            .title {
+                font-size: 64px;
+                font-weight: 700;
+            }
+
+            .list {
+                flex-direction: column;
+                gap: 40px;
+
+                .item {
+                    display: flex;
+                    align-items: center;
+                    font-size: 48px;
+                    gap: 32px;
+
+                    &::before {
+                        content: '';
+                        display: flex;
+                        width: 32px;
+                        border-radius: 50%;
+                        height: 32px;
+                        background: #f0bc1a;
+                    }
+                }
+            }
+        }
+
+        .leftBlock {
+            width: 533px;
+            align-items: center;
+
+            .title {
+                text-align: center;
+            }
+
+            .image {
+                width: 360px;
+                height: 360px;
+            }
+        }
+
+        .middleBlock,
+        .rightBlock {
+            flex: 1;
+        }
+    }
 }
