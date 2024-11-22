@@ -52,7 +52,9 @@ const FacultyPage: React.FC = () => {
             </Block>
             <Block className={styles.infoBlock}>
                 <Block className={[styles.block, styles.leftBlock].join(' ')}>
-                    <Text className={styles.bold}>{faculty.date}</Text>
+                    <Text className={[styles.bold, styles.date].join(' ')}>
+                        {faculty.date}
+                    </Text>
                     <Text className={styles.description}>
                         {faculty.institute}
                     </Text>
@@ -114,9 +116,7 @@ const FacultyPage: React.FC = () => {
                     </Text>
                     <Block className={styles.list}>
                         {faculty.professions.map((profession) => (
-                            <Text className={styles.item}>
-                                {profession}
-                            </Text>
+                            <Text className={styles.item}>{profession}</Text>
                         ))}
                     </Block>
                 </Block>
