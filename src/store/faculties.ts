@@ -724,6 +724,7 @@ const faculties: Array<IFaculty> = [
     },
     {
         id: 19,
+        // passingScore: 60,
         qrUrl: LaserOpticalElectronicDevicesAndSystemsMasterQr,
         type: 'Магистратура',
         date: '12.04.05',
