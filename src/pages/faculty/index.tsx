@@ -108,7 +108,9 @@ const FacultyPage: React.FC = () => {
                             {exams.map((exam) => exam.name).join(' / ')}
                             <Text className={styles.description}>
                                 {exams
-                                    .map((exam) => `от ${exam.minScore} баллов *`)
+                                    .map(
+                                        (exam) => `от ${exam.minScore} баллов *`
+                                    )
                                     .join(' / ')}
                             </Text>
                         </Filter>
@@ -133,9 +135,18 @@ const FacultyPage: React.FC = () => {
                         <Text className={styles.title}>
                             Основные места прохождения практик
                         </Text>
-                        <Block className={styles.list}>
-                            {faculty.practicePlaces.map((place, index) => (
-                                <Text key={index} className={styles.item}>{place}</Text>
+                        <Block className={styles.lists}>
+                            {faculty.practicePlaces.map((places, index) => (
+                                <Block key={index} className={styles.list}>
+                                    {places.map((place, index) => (
+                                        <Text
+                                            key={index}
+                                            className={styles.item}
+                                        >
+                                            {place}
+                                        </Text>
+                                    ))}
+                                </Block>
                             ))}
                         </Block>
                     </Block>
@@ -147,11 +158,18 @@ const FacultyPage: React.FC = () => {
                         <Text className={styles.title}>
                             Профессии, которые могут выбрать выпускники
                         </Text>
-                        <Block className={styles.list}>
-                            {faculty.professions.map((profession, index) => (
-                                <Text key={index} className={styles.item}>
-                                    {profession}
-                                </Text>
+                        <Block className={styles.lists}>
+                            {faculty.professions.map((professions, index) => (
+                                <Block key={index} className={styles.list}>
+                                    {professions.map((profession, index) => (
+                                        <Text
+                                            key={index}
+                                            className={styles.item}
+                                        >
+                                            {profession}
+                                        </Text>
+                                    ))}
+                                </Block>
                             ))}
                         </Block>
                     </Block>

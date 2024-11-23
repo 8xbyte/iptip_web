@@ -24,6 +24,6 @@ export interface IFaculty {
     price?: number
     budgetPlaces?: number
     exams: Array<Array<IExam>>
-    practicePlaces: Array<string>
-    professions: Array<string>
+    practicePlaces: Array<Array<string>>
+    professions: Array<Array<string>>
 }
