@@ -103,7 +103,7 @@ const faculties: Array<IFaculty> = [
             [
                 {
                     name: 'Информатика',
-                    minScore: 47
+                    minScore: 44
                 }
             ]
         ],
@@ -481,9 +481,9 @@ const faculties: Array<IFaculty> = [
         exams: [
             [
                 {
-                    name: 'Профильная математика',
-                    shortName: 'Математика (профиль)',
-                    minScore: 39
+                    name: 'Творческий экзамен',
+                    shortName: 'Творческий экзамен',
+                    minScore: 30
                 }
             ],
             [

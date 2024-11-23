@@ -114,6 +114,7 @@
             padding: 40px;
             border-radius: 24px;
             gap: 40px;
+            height: 630px;
 
             .title {
                 font-size: 64px;
@@ -122,7 +123,9 @@
 
             .list {
                 flex-direction: column;
+                flex-wrap: wrap;
                 gap: 40px;
+                max-height: 450px;
 
                 .item {
                     display: flex;

@@ -22,7 +22,8 @@
 
     .topBlock {
         justify-content: space-between;
-        gap: 32px;
+        gap: 16px;
+        flex: 1;
 
         .leftBlock {
             flex: 60;
@@ -62,11 +63,19 @@
             gap: 12px;
             flex-direction: column;
 
-            & > * {
+            .info {
                 width: 100%;
                 padding: 16px 32px;
                 border: 3px solid #f0bc1a;
             }
+
+            .noWrap {
+                white-space: nowrap;
+            }
+        }
+
+        .alignCenter {
+            justify-content: center;
         }
     }
 

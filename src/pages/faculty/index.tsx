@@ -75,7 +75,9 @@ const FacultyPage: React.FC = () => {
                     <Block className={styles.filters}>
                         {faculty.price ? (
                             <Filter selected className={styles.filter}>
-                                от 288 000 ₽ *
+                                {`от ${new Intl.NumberFormat('ru-RU').format(
+                                    faculty.price
+                                )} ₽ *`}
                                 <Text className={styles.text}>
                                     cтоимость обучения
                                 </Text>
@@ -83,7 +85,7 @@ const FacultyPage: React.FC = () => {
                         ) : null}
                         {faculty.budgetPlaces ? (
                             <Filter selected className={styles.filter}>
-                                140 *
+                                {faculty.budgetPlaces} *
                                 <Text className={styles.text}>
                                     бюджетных мест
                                 </Text>
@@ -106,7 +108,7 @@ const FacultyPage: React.FC = () => {
                             {exams.map((exam) => exam.name).join(' / ')}
                             <Text className={styles.description}>
                                 {exams
-                                    .map((exam) => `от ${exam.minScore} баллов`)
+                                    .map((exam) => `от ${exam.minScore} * баллов`)
                                     .join(' / ')}
                             </Text>
                         </Filter>

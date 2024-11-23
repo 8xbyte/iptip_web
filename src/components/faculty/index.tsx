@@ -38,9 +38,24 @@ const Faculty: React.FC<IFacultyProps> = ({ faculty, wide = false }) => {
                         <Text className={styles.title}>{faculty.name}</Text>
                     </Block>
                 </Block>
-                <Block className={styles.examsBlock}>
+                <Block
+                    className={[
+                        styles.examsBlock,
+                        faculty.type === 'Магистратура'
+                            ? styles.alignCenter
+                            : null
+                    ].join(' ')}
+                >
                     {faculty.exams.map((exams, index) => (
-                        <Block key={index} className={styles.info}>
+                        <Block
+                            key={index}
+                            className={[
+                                styles.info,
+                                faculty.type === 'Магистратура'
+                                    ? styles.noWrap
+                                    : null
+                            ].join(' ')}
+                        >
                             {exams
                                 .map((exam) => exam.shortName ?? exam.name)
                                 .join(' / ')}
@@ -52,7 +67,7 @@ const Faculty: React.FC<IFacultyProps> = ({ faculty, wide = false }) => {
                 <Block
                     className={[
                         styles.info,
-                        faculty.passingScore === null ? styles.newProfile : null
+                        faculty.passingScore ? null : styles.newProfile
                     ].join(' ')}
                 >
                     {faculty.passingScore
