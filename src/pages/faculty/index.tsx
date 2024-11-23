@@ -73,7 +73,7 @@ const FacultyPage: React.FC = () => {
                 </Block>
                 <Block className={[styles.block, styles.rightBlock].join(' ')}>
                     <Block className={styles.filters}>
-                        {faculty.price ? (
+                        {faculty.price !== undefined ? (
                             <Filter selected className={styles.filter}>
                                 {`от ${new Intl.NumberFormat('ru-RU').format(
                                     faculty.price
@@ -83,7 +83,7 @@ const FacultyPage: React.FC = () => {
                                 </Text>
                             </Filter>
                         ) : null}
-                        {faculty.budgetPlaces ? (
+                        {faculty.budgetPlaces !== undefined ? (
                             <Filter selected className={styles.filter}>
                                 {faculty.budgetPlaces} *
                                 <Text className={styles.text}>
