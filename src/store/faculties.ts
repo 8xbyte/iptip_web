@@ -60,12 +60,19 @@ const faculties: Array<IFaculty> = [
             ]
         ],
         practicePlaces: [
+<<<<<<< HEAD
             [
                 'АО «Ситроникс»',
                 'ПАО «Ростелеком»',
                 'АО «Российские космические системы»',
                 'Группа «Астра»'
             ]
+=======
+            'АО «Ситроникс»',
+            'ПАО «Ростелеком»',
+            'АО «Российские космические системы»',
+            'ПАО «Группа Астра»'
+>>>>>>> 89e7dab0a013bcff51e625de8706e5bbe879fb94
         ],
         professions: [
             [
@@ -188,7 +195,7 @@ const faculties: Array<IFaculty> = [
         institute: 'Лазерная техника и лазерные технологии',
         name: 'Лазерная инженерия',
         price: 240000,
-        budgetPlaces: 40,
+        budgetPlaces: 39,
         description:
             'В рамках профиля ведётся подготовка специалистов, которые способны создавать модели лазерных, оптических, оптико-электронных, механических блоков, узлов и деталей, используя системы автоматизированного проектирования',
         exams: [
@@ -320,6 +327,7 @@ const faculties: Array<IFaculty> = [
             ]
         ],
         practicePlaces: [
+<<<<<<< HEAD
             [
                 'ФГБУ «ВНИИМС»',
                 'ФГУП «ВНИИОФИ»',
@@ -327,6 +335,13 @@ const faculties: Array<IFaculty> = [
                 'ПАО «Мосэнерго»',
                 'АО «РКС»'
             ]
+=======
+            'ФГБУ «ВНИИМС»',
+            'ФГУП «ВНИИОФИ»',
+            'ФБУ «Ростест-Москва»',
+            'ПАО «Мосэнерго»',
+            'АО «Российские космические системы»'
+>>>>>>> 89e7dab0a013bcff51e625de8706e5bbe879fb94
         ],
         professions: [
             [
@@ -367,7 +382,7 @@ const faculties: Array<IFaculty> = [
             [
                 {
                     name: 'Химия',
-                    minScore: 44
+                    minScore: 39
                 },
                 {
                     name: 'Физика',
@@ -717,12 +732,19 @@ const faculties: Array<IFaculty> = [
             ]
         ],
         practicePlaces: [
+<<<<<<< HEAD
             [
                 'ЗАО «Станкопресс»',
                 'ООО «Интегратор цифровых решений»',
                 'Производственный комплекс «Салют» АО «ОДК»',
                 'ФГБУ Институт машиноведения имени А.А. Благонравова ИМАШ РАН'
             ]
+=======
+            'ЗАО «Станкопресс»',
+            'ООО «Интегратор цифровых решений»',
+            'Производственный комплекс «Салют» АО «ОДК»',
+            'Институт машиноведения имени А. А. Благонравова РАН (ИМАШ РАН)'
+>>>>>>> 89e7dab0a013bcff51e625de8706e5bbe879fb94
         ],
         professions: [
             [
@@ -772,7 +794,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 16,
+        id: 19,
         qrUrl: LaserOpticalElectronicDevicesAndSystemsMasterQr,
         type: 'Магистратура',
         date: '12.04.05',
@@ -811,7 +833,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 17,
+        id: 23,
         passingScore: 98,
         qrUrl: DesignVisualizationOfIndustrialProductsMasterQr,
         type: 'Магистратура',
@@ -854,7 +876,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 18,
+        id: 16,
         passingScore: 60,
         qrUrl: ComputerDesignMasterQr,
         type: 'Магистратура',
@@ -892,7 +914,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 19,
+        id: 20,
         passingScore: 45,
         qrUrl: DigitalAndAdditiveTechnologiesInMechanicalEngineeringMasterQr,
         type: 'Магистратура',
@@ -925,7 +947,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 20,
+        id: 24,
         passingScore: 112,
         qrUrl: GraphicDesignMasterQr,
         type: 'Магистратура',
@@ -962,7 +984,7 @@ const faculties: Array<IFaculty> = [
         professions: [['3D-дизайнер', 'Ведущий дизайнер', 'Арт-директор']]
     },
     {
-        id: 21,
+        id: 17,
         passingScore: 57,
         qrUrl: MicroAndNanoelectronicsTechnologiesAndDevicesMasterQr,
         type: 'Магистратура',
@@ -1000,7 +1022,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 22,
+        id: 21,
         passingScore: 80,
         qrUrl: MetrologicalExpertiseAndAccreditationMasterQr,
         type: 'Магистратура',
@@ -1042,7 +1064,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 23,
+        id: 18,
         passingScore: 62,
         qrUrl: OpticalTechnologiesMasterQr,
         type: 'Магистратура',
@@ -1076,7 +1098,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 24,
+        id: 22,
         passingScore: 45,
         qrUrl: PhysicsAndTechnologyOfNanosystemsMasterQr,
         type: 'Магистратура',
