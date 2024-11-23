@@ -48,11 +48,11 @@ const FacultyPage: React.FC = () => {
                                 — проходной балл
                             </Text>
                         </Filter>
-                    ) : (
+                    ) : faculty.budgetPlaces === undefined ? (
                         <Filter className={styles.filter}>
                             <Text className={styles.text}>Новый профиль</Text>
                         </Filter>
-                    )}
+                    ) : null}
                     <Filter className={styles.filter}>
                         <Text className={styles.text}>{faculty.type}</Text>
                     </Filter>
