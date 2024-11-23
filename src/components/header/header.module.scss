@@ -25,10 +25,19 @@
         margin-left: 146px;
     }
 
-    .qr {
-        min-width: 308px;
-        max-width: 308px;
-        min-height: 308px;
-        max-height: 308px;
+    .qrBlock {
+        flex-direction: column;
+
+        .qr {
+            min-width: 308px;
+            max-width: 308px;
+            min-height: 308px;
+            max-height: 308px;
+        }
+
+        .link {
+            font-size: 46px;
+            cursor: pointer;
+        }
     }
 }

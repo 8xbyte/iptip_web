@@ -103,12 +103,12 @@ const FacultyPage: React.FC = () => {
             <Block className={styles.examsBlock}>
                 <Text className={styles.title}>Вступительные испытания</Text>
                 <Block className={styles.filters}>
-                    {faculty.exams.map((exams) => (
-                        <Filter selected className={styles.filter}>
+                    {faculty.exams.map((exams, index) => (
+                        <Filter key={index} selected className={styles.filter}>
                             {exams.map((exam) => exam.name).join(' / ')}
                             <Text className={styles.description}>
                                 {exams
-                                    .map((exam) => `от ${exam.minScore} * баллов`)
+                                    .map((exam) => `от ${exam.minScore} баллов *`)
                                     .join(' / ')}
                             </Text>
                         </Filter>
@@ -134,8 +134,8 @@ const FacultyPage: React.FC = () => {
                             Основные места прохождения практик
                         </Text>
                         <Block className={styles.list}>
-                            {faculty.practicePlaces.map((place) => (
-                                <Text className={styles.item}>{place}</Text>
+                            {faculty.practicePlaces.map((place, index) => (
+                                <Text key={index} className={styles.item}>{place}</Text>
                             ))}
                         </Block>
                     </Block>
@@ -148,8 +148,8 @@ const FacultyPage: React.FC = () => {
                             Профессии, которые могут выбрать выпускники
                         </Text>
                         <Block className={styles.list}>
-                            {faculty.professions.map((profession) => (
-                                <Text className={styles.item}>
+                            {faculty.professions.map((profession, index) => (
+                                <Text key={index} className={styles.item}>
                                     {profession}
                                 </Text>
                             ))}

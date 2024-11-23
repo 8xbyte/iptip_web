@@ -5,7 +5,7 @@ import Text from '@/components/ui/text'
 import Logo from '@/assets/logo.png'
 import HeaderQr from '@/assets/header-qr.c.svg'
 import Button from '@/components/ui/button'
-import Lion from './assets/lion.png'
+import Lion from '@/assets/lion.png'
 
 import { useNavigate } from 'react-router-dom'
 
@@ -39,7 +39,19 @@ const Header: React.FC<IHeaderProps> = ({ button = false, qr = false }) => {
                     <Image className={styles.lion} src={Lion} />
                 </Button>
             ) : null}
-            {qr ? <HeaderQr className={styles.qr} /> : null}
+            {qr ? (
+                <Block className={styles.qrBlock}>
+                    <HeaderQr className={styles.qr} />
+                    <Text
+                        onClick={() =>
+                            (window.location.href = 'https://priem.mirea.ru')
+                        }
+                        className={styles.link}
+                    >
+                        priem.mirea.ru
+                    </Text>
+                </Block>
+            ) : null}
         </Block>
     )
 }

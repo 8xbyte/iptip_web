@@ -56,8 +56,8 @@ const HomePage: React.FC = () => {
                                     faculty.type === 'Специалитет'
                             )
                             .sort((first, second) => first.id - second.id)
-                            .map((faculty, index) => (
-                                <Faculty wide key={index} faculty={faculty} />
+                            .map((faculty) => (
+                                <Faculty wide key={faculty.id} faculty={faculty} />
                             ))}
                     </Block>
                 </Block>
@@ -72,8 +72,8 @@ const HomePage: React.FC = () => {
                             .filter(
                                 (faculty) => faculty.type === 'Магистратура'
                             )
-                            .map((faculty, index) => (
-                                <Faculty key={index} faculty={faculty} />
+                            .map((faculty) => (
+                                <Faculty key={faculty.id} faculty={faculty} />
                             ))}
                     </Block>
                 </Block>

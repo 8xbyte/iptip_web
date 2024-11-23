@@ -94,8 +94,8 @@ const TestResult: React.FC = () => {
             <BackButton onClick={() => navigate('/test/steps/1')} />
             <Text className={styles.title}>Результаты</Text>
             <Block className={styles.filters}>
-                {getFilters().map((filter) => (
-                    <Filter selected className={styles.filter}>
+                {getFilters().map((filter, index) => (
+                    <Filter key={index} selected className={styles.filter}>
                         {filter}
                     </Filter>
                 ))}
