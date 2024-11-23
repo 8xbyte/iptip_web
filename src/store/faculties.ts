@@ -723,7 +723,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 16,
+        id: 19,
         qrUrl: LaserOpticalElectronicDevicesAndSystemsMasterQr,
         type: 'Магистратура',
         date: '12.04.05',
@@ -758,7 +758,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 17,
+        id: 23,
         passingScore: 98,
         qrUrl: DesignVisualizationOfIndustrialProductsMasterQr,
         type: 'Магистратура',
@@ -797,7 +797,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 18,
+        id: 16,
         passingScore: 60,
         qrUrl: ComputerDesignMasterQr,
         type: 'Магистратура',
@@ -831,7 +831,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 19,
+        id: 20,
         passingScore: 45,
         qrUrl: DigitalAndAdditiveTechnologiesInMechanicalEngineeringMasterQr,
         type: 'Магистратура',
@@ -864,7 +864,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 20,
+        id: 24,
         passingScore: 112,
         qrUrl: GraphicDesignMasterQr,
         type: 'Магистратура',
@@ -899,7 +899,7 @@ const faculties: Array<IFaculty> = [
         professions: ['3D-дизайнер', 'Ведущий дизайнер', 'Арт-директор']
     },
     {
-        id: 21,
+        id: 17,
         passingScore: 57,
         qrUrl: MicroAndNanoelectronicsTechnologiesAndDevicesMasterQr,
         type: 'Магистратура',
@@ -933,7 +933,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 22,
+        id: 21,
         passingScore: 80,
         qrUrl: MetrologicalExpertiseAndAccreditationMasterQr,
         type: 'Магистратура',
@@ -969,7 +969,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 23,
+        id: 18,
         passingScore: 62,
         qrUrl: MicroAndNanoelectronicsTechnologiesAndDevicesMasterQr,
         type: 'Магистратура',
@@ -1003,7 +1003,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 24,
+        id: 22,
         passingScore: 45,
         qrUrl: PhysicsAndTechnologyOfNanosystemsMasterQr,
         type: 'Магистратура',
