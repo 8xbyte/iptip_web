@@ -64,17 +64,24 @@ const Faculty: React.FC<IFacultyProps> = ({ faculty, wide = false }) => {
                 </Block>
             </Block>
             <Block className={styles.bottomBlock}>
-                <Block
-                    className={[
-                        styles.info,
-                        faculty.passingScore ? null : styles.newProfile
-                    ].join(' ')}
-                >
-                    {faculty.passingScore
-                        ? `${faculty.passingScore} — проходной балл`
-                        : 'Новый профиль'}
-                </Block>
                 {faculty.passingScore ? (
+                    <Block
+                        className={[
+                            styles.info,
+                            faculty.passingScore ? null : styles.newProfile
+                        ].join(' ')}
+                    >
+                            {`${faculty.passingScore} — проходной балл`}
+                    </Block>
+                ) : null}
+                {faculty.budgetPlaces === undefined ? (
+                    <Block
+                        className={[styles.info, styles.newProfile].join(' ')}
+                    >
+                        Новый профиль
+                    </Block>
+                ) : null}
+                {faculty.budgetPlaces !== undefined ? (
                     <Block className={styles.info}>
                         {faculty.budgetPlaces} — бюджетных мест
                     </Block>
