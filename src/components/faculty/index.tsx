@@ -78,7 +78,7 @@ const Faculty: React.FC<IFacultyProps> = ({ faculty, wide = false }) => {
                     <Block
                         className={[styles.info, styles.newProfile].join(' ')}
                     >
-                        Новый профиль
+                        Новая программа
                     </Block>
                 ) : null}
                 {faculty.budgetPlaces !== undefined ? (
