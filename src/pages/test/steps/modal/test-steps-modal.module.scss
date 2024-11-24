@@ -1,0 +1,40 @@
+.testStepsModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#000, 0.5);
+    padding: 463px 199px;
+    z-index: 1;
+
+    .container {
+        background: #fff;
+        padding: 64px 120px;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 400px;
+        height: max-content;
+
+        .leftBlock {
+            gap: 64px;
+
+            .texts {
+                flex-direction: column;
+                justify-content: space-between;
+
+                .title {
+                    font-weight: 700;
+                    font-size: 96px;
+                    color: #2b2b2b;
+                }
+
+                .subTitle {
+                    font-size: 64px;
+                    color: #767676;
+                }
+            }
+        }
+    }
+}

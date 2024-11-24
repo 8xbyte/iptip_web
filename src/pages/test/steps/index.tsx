@@ -19,6 +19,8 @@ import FirstTestStep from './first-step'
 import SecondTestStep from './second-step'
 import * as styles from './test-steps.module.scss'
 import ThirdTestStep from './third-step'
+import { getFacultiesWithFilters } from '@/utils/filters'
+import TestStepsModal from './modal'
 
 const TestSteps: React.FC = () => {
     const match = useMatch('/test/steps/:pageId')
@@ -27,6 +29,8 @@ const TestSteps: React.FC = () => {
     const data = useAppSelector((state) => state.data)
 
     const navigate = useNavigate()
+
+    const [modalShowed, setModalShowed] = React.useState<boolean>(false)
 
     const previousPageHandler = () => {
         if (pageId) {
@@ -47,7 +51,11 @@ const TestSteps: React.FC = () => {
                         : '/test/steps/3'
                 )
             } else {
-                navigate('/test/result')
+                if (getFacultiesWithFilters().length) {
+                    navigate('/test/result')
+                } else {
+                    setModalShowed(true)
+                }
             }
         }
     }
@@ -65,6 +73,10 @@ const TestSteps: React.FC = () => {
 
     return pageId ? (
         <Block className={styles.testSteps}>
+            <TestStepsModal
+                onClose={() => setModalShowed(false)}
+                show={modalShowed}
+            />
             <Block className={styles.header}>
                 <BackButton onClick={() => navigate('/home')} />
                 <Filter className={styles.filter} selected>

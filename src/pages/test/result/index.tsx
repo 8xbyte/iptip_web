@@ -1,19 +1,17 @@
-import React from 'react'
 import Faculty from '@/components/faculty'
-import Header from '@/components/header'
-import Block from '@/components/ui/block'
-import Text from '@/components/ui/text'
-import faculties from '@/store/faculties'
-
-import { useAppDispatch, useAppSelector } from '@/store'
-import { ThirdTestFilterItemType } from '@/interfaces/filters'
-
-import * as styles from './result-test.module.scss'
 import BackButton from '@/components/ui/back-button'
+import Block from '@/components/ui/block'
 import Filter from '@/components/ui/filter'
-import { useNavigate } from 'react-router-dom'
+import Text from '@/components/ui/text'
+import React from 'react'
+
 import { addResult } from '@/api/result'
 import { IFaculty } from '@/interfaces/faculty'
+import { useAppDispatch, useAppSelector } from '@/store'
+import { getFacultiesWithFilters, getFilters } from '@/utils/filters'
+import { useNavigate } from 'react-router-dom'
+
+import * as styles from './result-test.module.scss'
 
 const TestResult: React.FC = () => {
     const data = useAppSelector((state) => state.data)
@@ -42,62 +40,6 @@ const TestResult: React.FC = () => {
 
         setFacultiesWithFilters(getFacultiesWithFilters())
     }, [])
-
-    const getFilters = () => {
-        const filtersBuffer = []
-        if (data.firstTestFilter) {
-            filtersBuffer.push(data.firstTestFilter)
-        }
-        if (data.secondTestFilter) {
-            filtersBuffer.push(data.secondTestFilter)
-        }
-        filtersBuffer.push(...data.thirdTestFilters)
-        return filtersBuffer
-    }
-
-    const getFacultiesWithFilters = () => {
-        let facultiesBuffer = [...faculties]
-
-        if (data.firstTestFilter) {
-            facultiesBuffer = facultiesBuffer.filter(
-                (faculty) =>
-                    ((faculty.type === 'Бакалавриат' ||
-                        faculty.type === 'Специалитет') &&
-                        data.firstTestFilter === 'Бакалавриат и специалитет') ||
-                    (faculty.type === 'Магистратура' &&
-                        data.firstTestFilter === 'Магистратура')
-            )
-        }
-
-        if (data.secondTestFilter) {
-            facultiesBuffer = facultiesBuffer.filter(
-                (faculty) => faculty.direction === data.secondTestFilter
-            )
-        }
-
-        if (
-            data.thirdTestFilters.length > 0 &&
-            data.firstTestFilter === 'Бакалавриат и специалитет'
-        ) {
-            facultiesBuffer = facultiesBuffer.filter((faculty) => {
-                for (let exams of faculty.exams) {
-                    for (let exam of exams) {
-                        if (
-                            data.thirdTestFilters.includes(
-                                exam.name as ThirdTestFilterItemType
-                            )
-                        ) {
-                            return true
-                        }
-                    }
-                }
-
-                return false
-            })
-        }
-
-        return facultiesBuffer
-    }
 
     return (
         <Block className={styles.testResult}>
