@@ -46,16 +46,16 @@ export const getFacultiesWithFilters = () => {
             for (let exams of faculty.exams) {
                 for (let exam of exams) {
                     if (
-                        data.thirdTestFilters.includes(
+                        !data.thirdTestFilters.includes(
                             exam.name as ThirdTestFilterItemType
                         )
                     ) {
-                        return true
+                        return false
                     }
                 }
             }
 
-            return false
+            return true
         })
     }
 
