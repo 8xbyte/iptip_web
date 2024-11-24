@@ -13,12 +13,16 @@ import BackButton from '@/components/ui/back-button'
 import Filter from '@/components/ui/filter'
 import { useNavigate } from 'react-router-dom'
 import { addResult } from '@/api/result'
+import { IFaculty } from '@/interfaces/faculty'
 
 const TestResult: React.FC = () => {
     const data = useAppSelector((state) => state.data)
 
     const navigate = useNavigate()
     const dispatch = useAppDispatch()
+
+    const [facultiesWithFilters, setFacultiesWithFilters] =
+        React.useState<Array<IFaculty> | null>(null)
 
     React.useEffect(() => {
         if (data.firstTestFilter && data.secondTestFilter) {
@@ -35,14 +39,20 @@ const TestResult: React.FC = () => {
                 })
             )
         }
+
+        setFacultiesWithFilters(getFacultiesWithFilters())
     }, [])
 
     const getFilters = () => {
-        return [
-            data.firstTestFilter,
-            data.secondTestFilter,
-            ...data.thirdTestFilters
-        ]
+        const filtersBuffer = []
+        if (data.firstTestFilter) {
+            filtersBuffer.push(data.firstTestFilter)
+        }
+        if (data.secondTestFilter) {
+            filtersBuffer.push(data.secondTestFilter)
+        }
+        filtersBuffer.push(...data.thirdTestFilters)
+        return filtersBuffer
     }
 
     const getFacultiesWithFilters = () => {
@@ -100,11 +110,20 @@ const TestResult: React.FC = () => {
                     </Filter>
                 ))}
             </Block>
-            <Block className={styles.list}>
-                {getFacultiesWithFilters().map((faculty) => (
-                    <Faculty key={faculty.id} faculty={faculty} />
-                ))}
-            </Block>
+            {facultiesWithFilters ? (
+                facultiesWithFilters.length ? (
+                    <Block className={styles.list}>
+                        {facultiesWithFilters.map((faculty) => (
+                            <Faculty key={faculty.id} faculty={faculty} />
+                        ))}
+                    </Block>
+                ) : (
+                    <Text className={styles.emptyText}>
+                        К сожалению, нет ни одной программы обучения,
+                        соответствующей выбранным вступительным экзаменам
+                    </Text>
+                )
+            ) : null}
         </Block>
     )
 }
