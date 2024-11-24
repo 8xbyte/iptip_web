@@ -37,14 +37,29 @@ const TestSteps: React.FC = () => {
     const nextPageHandler = () => {
         if (pageId) {
             const pageIdNumber = parseInt(pageId)
-            if (
-                pageIdNumber === 3 ||
-                (pageIdNumber === 2 && data.firstTestFilter === 'Магистратура')
-            ) {
-                navigate('/test/result')
+
+            if (pageIdNumber === 1 && data.firstTestFilter) {
+                navigate('/test/steps/2')
+            } else if (pageIdNumber === 2 && data.secondTestFilter) {
+                navigate(
+                    data.firstTestFilter === 'Магистратура'
+                        ? '/test/result'
+                        : '/test/steps/3'
+                )
             } else {
-                navigate(`/test/steps/${parseInt(pageId) + 1}`)
+                navigate('/test/result')
             }
+        }
+    }
+
+    const nextButtonShow = () => {
+        if (pageId) {
+            const pageIdNumber = parseInt(pageId)
+            return (pageIdNumber === 1 && data.firstTestFilter) ||
+                (pageIdNumber === 2 && data.secondTestFilter) ||
+                pageIdNumber === 3
+                ? true
+                : false
         }
     }
 
@@ -83,7 +98,11 @@ const TestSteps: React.FC = () => {
                 </Block>
                 <Button
                     onClick={nextPageHandler}
-                    className={[styles.pageButton, styles.nextButton].join(' ')}
+                    className={[
+                        styles.pageButton,
+                        styles.nextButton,
+                        nextButtonShow() ? null : styles.hidden
+                    ].join(' ')}
                 >
                     <Arrow className={styles.arrow} />
                 </Button>
