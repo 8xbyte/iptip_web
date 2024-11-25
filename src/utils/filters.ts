@@ -43,14 +43,15 @@ export const getFacultiesWithFilters = () => {
         data.firstTestFilter === 'Бакалавриат и специалитет'
     ) {
         facultiesBuffer = facultiesBuffer.filter((faculty) => {
+            console.log(faculty.name)
             for (let exams of faculty.exams) {
-                if (
-                    !data.thirdTestFilters.includes(
-                        ...exams.map((exam) => exam.name)
-                    )
-                ) {
-                    return false
+                let stop = true
+                for (let exam of exams.map((exam) => exam.name)) {
+                    if (data.thirdTestFilters.includes(exam)) {
+                        stop = false
+                    }
                 }
+                if (stop) return false
             }
 
             return true
