@@ -16,9 +16,16 @@
         align-items: center;
         border-radius: 400px;
         height: max-content;
+        gap: 64px;
 
         .leftBlock {
+            align-items: center;
             gap: 64px;
+
+            .error {
+                min-width: 204px;
+                min-height: 204px;
+            }
 
             .texts {
                 flex-direction: column;
@@ -35,6 +42,11 @@
                     color: #767676;
                 }
             }
+        }
+
+        .close {
+            min-width: 148px;
+            min-height: 148px;
         }
     }
 }

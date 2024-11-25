@@ -16,16 +16,18 @@ const TestStepsModal: React.FC<IModalProps> = ({ show = false, onClose }) => {
         <Block className={styles.testStepsModal}>
             <Block className={styles.container}>
                 <Block className={styles.leftBlock}>
-                    <Error />
+                    <Error className={styles.error} />
                     <Block className={styles.texts}>
                         <Text className={styles.title}>Внимание</Text>
                         <Text className={styles.subTitle}>
                             К сожалению, нет ни одной программы обучения,
-                            соответствующей выбранным вступительным экзаменам
+                            соответствующей выбранным вступительным экзаменам.
+                            Выберите дополнительные экзамены или другую группу
+                            направлений на предыдущем шаге
                         </Text>
                     </Block>
                 </Block>
-                <Close onClick={onClose} />
+                <Close className={styles.close} onClick={onClose} />
             </Block>
         </Block>
     ) : null
