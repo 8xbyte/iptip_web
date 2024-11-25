@@ -1,21 +1,15 @@
-import React from 'react'
+import HeaderQr from '@/assets/header-qr.c.svg'
+import Lion from '@/assets/lion.png'
+import Logo from '@/assets/logo.png'
 import Block from '@/components/ui/block'
+import Button from '@/components/ui/button'
 import Image from '@/components/ui/image'
 import Text from '@/components/ui/text'
-import Logo from '@/assets/logo.png'
-import HeaderQr from '@/assets/header-qr.c.svg'
-import Button from '@/components/ui/button'
-import Lion from '@/assets/lion.png'
+import React from 'react'
 
 import { useNavigate } from 'react-router-dom'
 
 import * as styles from './header.module.scss'
-import { useAppDispatch } from '@/store'
-import {
-    clearThirdTestFilters,
-    setFirstTestFilter,
-    setSecondTestFilter
-} from '@/store/slices/data'
 
 export interface IHeaderProps {
     button?: boolean
@@ -23,13 +17,9 @@ export interface IHeaderProps {
 }
 
 const Header: React.FC<IHeaderProps> = ({ button = false, qr = false }) => {
-    const dispatch = useAppDispatch()
     const navigate = useNavigate()
 
     const testButtonHandler = () => {
-        dispatch(setFirstTestFilter(null))
-        dispatch(setSecondTestFilter(null))
-        dispatch(clearThirdTestFilters())
         navigate('/test')
     }
 

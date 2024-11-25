@@ -1,10 +1,10 @@
-import Block from '@/components/ui/block'
-import Error from '@/assets/error.c.svg'
 import Close from '@/assets/close.c.svg'
+import Error from '@/assets/error.c.svg'
+import Block from '@/components/ui/block'
+import Text from '@/components/ui/text'
 import React from 'react'
 
 import * as styles from './test-steps-modal.module.scss'
-import Text from '@/components/ui/text'
 
 export interface IModalProps {
     show: boolean

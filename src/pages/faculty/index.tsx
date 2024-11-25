@@ -1,19 +1,16 @@
 import Header from '@/components/header'
+import BackButton from '@/components/ui/back-button'
 import Block from '@/components/ui/block'
-import Button from '@/components/ui/button'
-import Arrow from '@/assets/arrow.c.svg'
+import Filter from '@/components/ui/filter'
+import Image from '@/components/ui/image'
+import Text from '@/components/ui/text'
+import faculties from '@/store/faculties'
 import React from 'react'
 
-import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { IFaculty } from '@/interfaces/faculty'
+import { useNavigate, useParams } from 'react-router-dom'
 
 import * as styles from './faculty-page.module.scss'
-import BackButton from '@/components/ui/back-button'
-import Filter from '@/components/ui/filter'
-import { useAppSelector } from '@/store'
-import faculties from '@/store/faculties'
-import { IFaculty } from '@/interfaces/faculty'
-import Text from '@/components/ui/text'
-import Image from '@/components/ui/image'
 
 const FacultyPage: React.FC = () => {
     const { facultyId } = useParams<{
@@ -94,8 +91,8 @@ const FacultyPage: React.FC = () => {
                     </Block>
                     {faculty.budgetPlaces && faculty.price ? (
                         <Text className={styles.description}>
-                            *Данные на 2024 г. набора. <br /> Актуальные данные появятся
-                            в январе 2025 г.
+                            *Данные на 2024 г. набора. <br /> Актуальные данные
+                            появятся в январе 2025 г.
                         </Text>
                     ) : null}
                 </Block>

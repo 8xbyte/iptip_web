@@ -1,9 +1,17 @@
 import Arrow from '@/assets/arrow.c.svg'
 import BackButton from '@/components/ui/back-button'
 import Block from '@/components/ui/block'
+import Button from '@/components/ui/button'
 import Filter from '@/components/ui/filter'
-
+import Text from '@/components/ui/text'
 import React from 'react'
+import FirstTestStep from './first-step'
+import TestStepsModal from './modal'
+import SecondTestStep from './second-step'
+import ThirdTestStep from './third-step'
+
+import { useAppSelector } from '@/store'
+import { getFacultiesWithFilters } from '@/utils/filters'
 import {
     Navigate,
     Route,
@@ -12,15 +20,7 @@ import {
     useNavigate
 } from 'react-router-dom'
 
-import Button from '@/components/ui/button'
-import Text from '@/components/ui/text'
-import { useAppSelector } from '@/store'
-import FirstTestStep from './first-step'
-import SecondTestStep from './second-step'
 import * as styles from './test-steps.module.scss'
-import ThirdTestStep from './third-step'
-import { getFacultiesWithFilters } from '@/utils/filters'
-import TestStepsModal from './modal'
 
 const TestSteps: React.FC = () => {
     const match = useMatch('/test/steps/:pageId')
