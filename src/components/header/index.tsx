@@ -8,6 +8,12 @@ import Text from '@/components/ui/text'
 import React from 'react'
 
 import { useNavigate } from 'react-router-dom'
+import { useAppDispatch } from '@/store'
+import {
+    clearThirdTestFilters,
+    setFirstTestFilter,
+    setSecondTestFilter
+} from '@/store/slices/data'
 
 import * as styles from './header.module.scss'
 
@@ -18,9 +24,13 @@ export interface IHeaderProps {
 
 const Header: React.FC<IHeaderProps> = ({ button = false, qr = false }) => {
     const navigate = useNavigate()
+    const dispatch = useAppDispatch()
 
     const testButtonHandler = () => {
-        navigate('/test')
+        dispatch(setFirstTestFilter(null))
+        dispatch(setSecondTestFilter(null))
+        dispatch(clearThirdTestFilters())
+        navigate('/test/steps/1')
     }
 
     return (

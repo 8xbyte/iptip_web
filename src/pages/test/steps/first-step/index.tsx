@@ -1,14 +1,10 @@
 import Block from '@/components/ui/block'
+import Filter from '@/components/ui/filter'
 import Text from '@/components/ui/text'
 import React from 'react'
-import Filter from '@/components/ui/filter'
 
-import {
-    clearThirdTestFilters,
-    setFirstTestFilter,
-    setSecondTestFilter
-} from '@/store/slices/data'
 import { useAppDispatch, useAppSelector } from '@/store'
+import { setFirstTestFilter } from '@/store/slices/data'
 import { useNavigate } from 'react-router-dom'
 
 import * as styles from './first-test-step.module.scss'
@@ -18,12 +14,6 @@ const FirstTestStep: React.FC = () => {
 
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
-
-    React.useEffect(() => {
-        dispatch(setFirstTestFilter(null))
-        dispatch(setSecondTestFilter(null))
-        dispatch(clearThirdTestFilters())
-    }, [])
 
     return (
         <Block className={styles.firstTestStep}>

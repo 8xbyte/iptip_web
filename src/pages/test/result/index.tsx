@@ -10,6 +10,11 @@ import { IFaculty } from '@/interfaces/faculty'
 import { useAppDispatch, useAppSelector } from '@/store'
 import { getFacultiesWithFilters, getFilters } from '@/utils/filters'
 import { useNavigate } from 'react-router-dom'
+import {
+    clearThirdTestFilters,
+    setFirstTestFilter,
+    setSecondTestFilter
+} from '@/store/slices/data'
 
 import * as styles from './result-test.module.scss'
 
@@ -43,7 +48,14 @@ const TestResult: React.FC = () => {
 
     return (
         <Block className={styles.testResult}>
-            <BackButton onClick={() => navigate('/test/steps/1')} />
+            <BackButton
+                onClick={() => {
+                    dispatch(setFirstTestFilter(null))
+                    dispatch(setSecondTestFilter(null))
+                    dispatch(clearThirdTestFilters())
+                    navigate('/test/steps/1')
+                }}
+            />
             <Text className={styles.title}>Результаты</Text>
             <Block className={styles.filters}>
                 {getFilters().map((filter, index) => (

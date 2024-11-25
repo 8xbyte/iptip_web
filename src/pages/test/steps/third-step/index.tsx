@@ -41,8 +41,9 @@ const ThirdTestStep: React.FC = () => {
                 Выберите ЕГЭ, которые планируете сдавать
             </Text>
             <Block className={styles.filters}>
-                {getFacultiesFilters().map((filter) => (
+                {getFacultiesFilters().map((filter, index) => (
                     <Filter
+                        key={index}
                         onClick={() => clickFilterHandler(filter)}
                         selected={selectedFilter(filter)}
                         className={styles.filter}
