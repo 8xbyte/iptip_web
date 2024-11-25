@@ -15,7 +15,7 @@ const SecondTestStep: React.FC = () => {
 
     return (
         <Block className={styles.secondTestStep}>
-            <Text className={styles.title}>Форма обучения</Text>
+            <Text className={styles.title}>Выберите интересующее Вас направление</Text>
             <Block className={styles.filters}>
                 <Filter
                     onClick={() =>
