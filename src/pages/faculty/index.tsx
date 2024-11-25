@@ -43,7 +43,7 @@ const FacultyPage: React.FC = () => {
                 <Block className={styles.filters}>
                     {faculty.passingScore ? (
                         <Filter className={styles.filter}>
-                            {faculty.passingScore}
+                            {`${faculty.passingScore}*`}
                             <Text className={styles.text}>
                                 — проходной балл
                             </Text>
