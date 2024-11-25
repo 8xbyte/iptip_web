@@ -94,7 +94,7 @@ const FacultyPage: React.FC = () => {
                     </Block>
                     {faculty.budgetPlaces && faculty.price ? (
                         <Text className={styles.description}>
-                            *Данные на 2024 г. <br /> Актуальные данные появятся
+                            *Данные на 2024 г. набора. <br /> Актуальные данные появятся
                             в январе 2025 г.
                         </Text>
                     ) : null}
