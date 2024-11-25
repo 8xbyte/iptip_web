@@ -10,6 +10,12 @@ import Lion from '@/assets/lion.png'
 import { useNavigate } from 'react-router-dom'
 
 import * as styles from './header.module.scss'
+import { useAppDispatch } from '@/store'
+import {
+    clearThirdTestFilters,
+    setFirstTestFilter,
+    setSecondTestFilter
+} from '@/store/slices/data'
 
 export interface IHeaderProps {
     button?: boolean
@@ -17,7 +23,15 @@ export interface IHeaderProps {
 }
 
 const Header: React.FC<IHeaderProps> = ({ button = false, qr = false }) => {
+    const dispatch = useAppDispatch()
     const navigate = useNavigate()
+
+    const testButtonHandler = () => {
+        dispatch(setFirstTestFilter(null))
+        dispatch(setSecondTestFilter(null))
+        dispatch(clearThirdTestFilters())
+        navigate('/test')
+    }
 
     return (
         <Block className={styles.header}>
@@ -33,7 +47,7 @@ const Header: React.FC<IHeaderProps> = ({ button = false, qr = false }) => {
             {button ? (
                 <Button
                     className={styles.testButton}
-                    onClick={() => navigate('/test')}
+                    onClick={testButtonHandler}
                 >
                     Тест на профориентацию
                     <Image className={styles.lion} src={Lion} />
