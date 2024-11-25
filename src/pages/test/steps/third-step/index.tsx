@@ -32,7 +32,7 @@ const ThirdTestStep: React.FC = () => {
 
     return (
         <Block className={styles.thirdTestStep}>
-            <Text className={styles.title}>Форма обучения</Text>
+            <Text className={styles.title}>Выберите ЕГЭ, которые планируете сдавать</Text>
             <Block className={styles.filters}>
                 <Filter
                     onClick={() => clickFilterHandler('Информатика')}
