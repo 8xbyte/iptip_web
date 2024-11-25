@@ -48,7 +48,7 @@ const ThirdTestStep: React.FC = () => {
                         selected={selectedFilter(filter)}
                         className={styles.filter}
                     >
-                        Информатика
+                        {filter}
                     </Filter>
                 ))}
                 <Filter
