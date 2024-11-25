@@ -43,7 +43,6 @@ export const getFacultiesFilters = () => {
     for (let faculty of facultiesBuffer) {
         for (let exams of faculty.exams) {
             for (let exam of exams) {
-                console.log(filters, exam.name)
                 if (!filters.includes(exam.name as ThirdTestFilterItemType)) {
                     filters.push(exam.name as ThirdTestFilterItemType)
                 }
