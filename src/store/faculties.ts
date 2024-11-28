@@ -561,7 +561,7 @@ const faculties: Array<IFaculty> = [
         date: '27.03.02',
         direction: 'Инженерное направление',
         institute: 'Управление качеством',
-        name: 'Управление качеством',
+        name: 'Управление качеством (Ростех.Качество)',
         description: 'Описание',
         exams: [
             [
