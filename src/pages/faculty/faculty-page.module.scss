@@ -3,13 +3,15 @@
     gap: 64px;
 
     .header {
+        gap: 636px;
         justify-content: space-between;
 
         .filters {
+            flex: 1;
             gap: 40px;
 
             .filter {
-                width: 1390px;
+                flex: 1;
                 height: 179px;
                 font-size: 96px;
                 gap: 16px;
@@ -19,7 +21,15 @@
                     font-size: 64px;
                 }
             }
+
+            .sponsorFilter {
+                padding: 35px 0;
+            }
         }
+    }
+
+    .sponsorHeader {
+        gap: 298px;
     }
 
     .infoBlock {

@@ -56,6 +56,15 @@
                     font-size: 40px;
                 }
             }
+
+            .sponsorBlock {
+                gap: 16px;
+                align-items: center;
+
+                .text {
+                    font-size: 20px;
+                }
+            }
         }
 
         .examsBlock {

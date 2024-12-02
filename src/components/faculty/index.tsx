@@ -6,6 +6,7 @@ import { IFaculty } from '@/interfaces/faculty'
 import { useNavigate } from 'react-router-dom'
 
 import * as styles from './faculty.module.scss'
+import Image from '../ui/image'
 
 export interface IFacultyProps {
     faculty: IFaculty
@@ -31,12 +32,23 @@ const Faculty: React.FC<IFacultyProps> = ({ faculty, wide = false }) => {
                             {faculty.direction}
                         </Block>
                     </Block>
-                    <Block className={styles.textBlock}>
+                    <Block
+                        style={{
+                            width: faculty.nameBlockWidth
+                        }}
+                        className={styles.textBlock}
+                    >
                         <Text className={styles.subTitle}>
                             {faculty.institute}
                         </Text>
                         <Text className={styles.title}>{faculty.name}</Text>
                     </Block>
+                    {faculty.sponsorLogoUrl ? (
+                        <Block className={styles.sponsorBlock}>
+                            <Text className={styles.text}>Программа реализована при поддержке:</Text>
+                            <Image src={faculty.sponsorLogoUrl} />
+                        </Block>
+                    ) : null}
                 </Block>
                 <Block
                     className={[
@@ -71,7 +83,7 @@ const Faculty: React.FC<IFacultyProps> = ({ faculty, wide = false }) => {
                             faculty.passingScore ? null : styles.newProfile
                         ].join(' ')}
                     >
-                            {`${faculty.passingScore} — проходной балл`}
+                        {`${faculty.passingScore} — проходной балл`}
                     </Block>
                 ) : null}
                 {faculty.budgetPlaces === undefined ? (

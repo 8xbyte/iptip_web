@@ -17,6 +17,8 @@ export interface IFaculty {
     passingScore?: number
     type: FacultyType
     date: string
+    nameBlockWidth?: number
+    sponsorLogoUrl?: string
     direction: DirectionType
     institute: string
     name: string

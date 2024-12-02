@@ -35,13 +35,28 @@ const FacultyPage: React.FC = () => {
     return faculty ? (
         <Block className={styles.facultyPage}>
             <Header qr />
-            <Block className={styles.header}>
+            <Block
+                className={[
+                    styles.header,
+                    faculty.sponsorLogoUrl ? styles.sponsorHeader : null
+                ].join(' ')}
+            >
                 <ArrowButton
                     leftArrow
                     text='Вернуться назад'
                     onClick={() => navigate('/home')}
                 />
                 <Block className={styles.filters}>
+                    {faculty.sponsorLogoUrl ? (
+                        <Filter
+                            className={[
+                                styles.filter,
+                                styles.sponsorFilter
+                            ].join(' ')}
+                        >
+                            <Image src={faculty.sponsorLogoUrl} />
+                        </Filter>
+                    ) : null}
                     {faculty.passingScore ? (
                         <Filter className={styles.filter}>
                             {`${faculty.passingScore}`}
