@@ -1,7 +1,7 @@
 import {
     FirstTestFilterType,
     HomeFilterType,
-    SecondTestFilterType,
+    SecondTestFilterItemType,
     ThirdTestFilterItemType
 } from '@/interfaces/filters'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
@@ -9,14 +9,14 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 interface IInitialState {
     homeFilter: HomeFilterType
     firstTestFilter: FirstTestFilterType | null
-    secondTestFilter: SecondTestFilterType | null
+    secondTestFilter: Array<SecondTestFilterItemType>
     thirdTestFilters: Array<ThirdTestFilterItemType>
 }
 
 const initialState: IInitialState = {
     homeFilter: 'Бакалавриат и специалитет',
     firstTestFilter: null,
-    secondTestFilter: null,
+    secondTestFilter: [],
     thirdTestFilters: []
 }
 
@@ -33,11 +33,22 @@ const dataSlice = createSlice({
         ) => {
             state.firstTestFilter = action.payload
         },
-        setSecondTestFilter: (
+        addSecondTestFilter: (
             state,
-            action: PayloadAction<SecondTestFilterType | null>
+            action: PayloadAction<SecondTestFilterItemType>
         ) => {
-            state.secondTestFilter = action.payload
+            state.secondTestFilter = [...state.secondTestFilter, action.payload]
+        },
+        clearSecondTestFilters: (state) => {
+            state.secondTestFilter = []
+        },
+        removeSecondTestFilter: (
+            state,
+            action: PayloadAction<SecondTestFilterItemType>
+        ) => {
+            state.secondTestFilter = state.secondTestFilter.filter(
+                (filter) => filter !== action.payload
+            )
         },
         addThirdTestFilter: (
             state,
@@ -62,7 +73,9 @@ const dataSlice = createSlice({
 export const {
     setHomeNavigation,
     setFirstTestFilter,
-    setSecondTestFilter,
+    addSecondTestFilter,
+    clearSecondTestFilters,
+    removeSecondTestFilter,
     addThirdTestFilter,
     clearThirdTestFilters,
     removeThirdTestFilter

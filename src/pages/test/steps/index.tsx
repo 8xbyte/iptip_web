@@ -1,5 +1,5 @@
 import Arrow from '@/assets/arrow.c.svg'
-import BackButton from '@/components/ui/back-button'
+import ArrowButton from '@/components/ui/arrow-button'
 import Block from '@/components/ui/block'
 import Button from '@/components/ui/button'
 import Filter from '@/components/ui/filter'
@@ -78,7 +78,11 @@ const TestSteps: React.FC = () => {
                 show={modalShowed}
             />
             <Block className={styles.header}>
-                <BackButton onClick={() => navigate('/home')} />
+                <ArrowButton
+                    leftArrow
+                    text='Вернуться на главную страницу'
+                    onClick={() => navigate('/home')}
+                />
                 <Filter className={styles.filter} selected>
                     Тест на профориентацию
                 </Filter>
@@ -90,15 +94,15 @@ const TestSteps: React.FC = () => {
                 <Route path='*' element={<Navigate to='/test/steps/1' />} />
             </Routes>
             <Block className={styles.pagination}>
-                <Button
+                <ArrowButton
+                    leftArrow
+                    text='Вернуться к предыдущему вопросу'
                     onClick={previousPageHandler}
                     className={[
                         styles.pageButton,
                         parseInt(pageId) === 1 ? styles.hidden : null
                     ].join(' ')}
-                >
-                    <Arrow />
-                </Button>
+                />
                 <Block className={styles.pageBlock}>
                     <Button className={styles.page}>
                         {match?.params.pageId}
@@ -108,16 +112,16 @@ const TestSteps: React.FC = () => {
                         {data.firstTestFilter === 'Магистратура' ? 2 : 3}
                     </Button>
                 </Block>
-                <Button
+                <ArrowButton
+                    rightArrow
+                    text='Перейти к следующему вопросу'
                     onClick={nextPageHandler}
                     className={[
                         styles.pageButton,
                         styles.nextButton,
                         nextButtonShow() ? null : styles.hidden
                     ].join(' ')}
-                >
-                    <Arrow className={styles.arrow} />
-                </Button>
+                />
             </Block>
         </Block>
     ) : (

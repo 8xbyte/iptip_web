@@ -1,5 +1,5 @@
 import Faculty from '@/components/faculty'
-import BackButton from '@/components/ui/back-button'
+import ArrowButton from '@/components/ui/arrow-button'
 import Block from '@/components/ui/block'
 import Filter from '@/components/ui/filter'
 import Text from '@/components/ui/text'
@@ -11,9 +11,9 @@ import { useAppDispatch, useAppSelector } from '@/store'
 import { getFacultiesWithFilters, getFilters } from '@/utils/filters'
 import { useNavigate } from 'react-router-dom'
 import {
+    clearSecondTestFilters,
     clearThirdTestFilters,
-    setFirstTestFilter,
-    setSecondTestFilter
+    setFirstTestFilter
 } from '@/store/slices/data'
 
 import * as styles from './result-test.module.scss'
@@ -32,7 +32,7 @@ const TestResult: React.FC = () => {
             dispatch(
                 addResult({
                     question1: data.firstTestFilter,
-                    question2: data.secondTestFilter,
+                    question2: data.secondTestFilter.join(', '),
                     question3:
                         data.firstTestFilter === 'Бакалавриат и специалитет'
                             ? data.thirdTestFilters.length === 0
@@ -48,10 +48,12 @@ const TestResult: React.FC = () => {
 
     return (
         <Block className={styles.testResult}>
-            <BackButton
+            <ArrowButton
+                leftArrow
+                text='Вернуться к тесту'
                 onClick={() => {
                     dispatch(setFirstTestFilter(null))
-                    dispatch(setSecondTestFilter(null))
+                    dispatch(clearSecondTestFilters())
                     dispatch(clearThirdTestFilters())
                     navigate('/test/steps/1')
                 }}

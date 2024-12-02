@@ -1,5 +1,5 @@
 import Header from '@/components/header'
-import BackButton from '@/components/ui/back-button'
+import ArrowButton from '@/components/ui/arrow-button'
 import Block from '@/components/ui/block'
 import Filter from '@/components/ui/filter'
 import Image from '@/components/ui/image'
@@ -36,7 +36,11 @@ const FacultyPage: React.FC = () => {
         <Block className={styles.facultyPage}>
             <Header qr />
             <Block className={styles.header}>
-                <BackButton onClick={() => navigate('/home')} />
+                <ArrowButton
+                    leftArrow
+                    text='Вернуться назад'
+                    onClick={() => navigate('/home')}
+                />
                 <Block className={styles.filters}>
                     {faculty.passingScore ? (
                         <Filter className={styles.filter}>

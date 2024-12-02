@@ -12,7 +12,7 @@ import { useAppDispatch } from '@/store'
 import {
     clearThirdTestFilters,
     setFirstTestFilter,
-    setSecondTestFilter
+    clearSecondTestFilters
 } from '@/store/slices/data'
 
 import * as styles from './header.module.scss'
@@ -28,7 +28,7 @@ const Header: React.FC<IHeaderProps> = ({ button = false, qr = false }) => {
 
     const testButtonHandler = () => {
         dispatch(setFirstTestFilter(null))
-        dispatch(setSecondTestFilter(null))
+        dispatch(clearSecondTestFilters())
         dispatch(clearThirdTestFilters())
         navigate('/test/steps/1')
     }

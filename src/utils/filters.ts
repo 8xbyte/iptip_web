@@ -33,9 +33,9 @@ export const getFacultiesFilters = () => {
         )
     }
 
-    if (data.secondTestFilter) {
-        facultiesBuffer = facultiesBuffer.filter(
-            (faculty) => faculty.direction === data.secondTestFilter
+    if (data.secondTestFilter.length > 0) {
+        facultiesBuffer = facultiesBuffer.filter((faculty) =>
+            data.secondTestFilter.includes(faculty.direction)
         )
     }
 
@@ -68,9 +68,9 @@ export const getFacultiesWithFilters = () => {
         )
     }
 
-    if (data.secondTestFilter) {
-        facultiesBuffer = facultiesBuffer.filter(
-            (faculty) => faculty.direction === data.secondTestFilter
+    if (data.secondTestFilter.length > 0) {
+        facultiesBuffer = facultiesBuffer.filter((faculty) =>
+            data.secondTestFilter.includes(faculty.direction)
         )
     }
 
@@ -79,7 +79,6 @@ export const getFacultiesWithFilters = () => {
         data.firstTestFilter === 'Бакалавриат и специалитет'
     ) {
         facultiesBuffer = facultiesBuffer.filter((faculty) => {
-            console.log(faculty.name)
             for (let exams of faculty.exams) {
                 let stop = true
                 for (let exam of exams.map((exam) => exam.name)) {

@@ -4,8 +4,11 @@ import Text from '@/components/ui/text'
 import React from 'react'
 
 import { useAppDispatch, useAppSelector } from '@/store'
-import { setSecondTestFilter } from '@/store/slices/data'
-import { useNavigate } from 'react-router-dom'
+import {
+    addSecondTestFilter,
+    removeSecondTestFilter
+} from '@/store/slices/data'
+import { SecondTestFilterItemType } from '@/interfaces/filters'
 
 import * as styles from './second-test-step.module.scss'
 
@@ -13,14 +16,17 @@ const SecondTestStep: React.FC = () => {
     const data = useAppSelector((state) => state.data)
 
     const dispatch = useAppDispatch()
-    const navigate = useNavigate()
 
-    const nextPage = () => {
-        navigate(
-            data.firstTestFilter === 'Магистратура'
-                ? '/test/result'
-                : '/test/steps/3'
-        )
+    const selectedFilter = (filter: SecondTestFilterItemType) => {
+        return data.secondTestFilter.includes(filter)
+    }
+
+    const clickFilterHandler = (filter: SecondTestFilterItemType) => {
+        if (data.secondTestFilter.includes(filter)) {
+            dispatch(removeSecondTestFilter(filter))
+        } else {
+            dispatch(addSecondTestFilter(filter))
+        }
     }
 
     return (
@@ -30,35 +36,22 @@ const SecondTestStep: React.FC = () => {
             </Text>
             <Block className={styles.filters}>
                 <Filter
-                    onClick={() => {
-                        dispatch(setSecondTestFilter('IT-направление'))
-                        nextPage()
-                    }}
-                    selected={data.secondTestFilter === 'IT-направление'}
+                    onClick={() => clickFilterHandler('IT-направление')}
+                    selected={selectedFilter('IT-направление')}
                     className={styles.filter}
                 >
                     IT-направление
                 </Filter>
                 <Filter
-                    onClick={() => {
-                        dispatch(setSecondTestFilter('Инженерное направление'))
-                        nextPage()
-                    }}
-                    selected={
-                        data.secondTestFilter === 'Инженерное направление'
-                    }
+                    onClick={() => clickFilterHandler('Инженерное направление')}
+                    selected={selectedFilter('Инженерное направление')}
                     className={styles.filter}
                 >
                     Инженерное направление
                 </Filter>
                 <Filter
-                    onClick={() => {
-                        dispatch(setSecondTestFilter('Творческое направление'))
-                        nextPage()
-                    }}
-                    selected={
-                        data.secondTestFilter === 'Творческое направление'
-                    }
+                    onClick={() => clickFilterHandler('Творческое направление')}
+                    selected={selectedFilter('Творческое направление')}
                     className={styles.filter}
                 >
                     Творческое направление

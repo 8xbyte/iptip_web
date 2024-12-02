@@ -1,7 +1,7 @@
 export type HomeFilterType = 'Бакалавриат и специалитет' | 'Магистратура'
 
 export type FirstTestFilterType = 'Бакалавриат и специалитет' | 'Магистратура'
-export type SecondTestFilterType =
+export type SecondTestFilterItemType =
     | 'IT-направление'
     | 'Инженерное направление'
     | 'Творческое направление'
