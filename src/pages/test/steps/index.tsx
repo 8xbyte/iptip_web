@@ -64,7 +64,7 @@ const TestSteps: React.FC = () => {
         if (pageId) {
             const pageIdNumber = parseInt(pageId)
             return (pageIdNumber === 1 && data.firstTestFilter) ||
-                (pageIdNumber === 2 && data.secondTestFilter) ||
+                (pageIdNumber === 2 && data.secondTestFilter.length > 0) ||
                 pageIdNumber === 3
                 ? true
                 : false
