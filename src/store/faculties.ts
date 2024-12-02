@@ -136,6 +136,7 @@ const faculties: Array<IFaculty> = [
         direction: 'IT-направление',
         institute: 'Электроника и наноэлектроника',
         name: 'Наноэлектроника (Код Ростеха)',
+        sponsorLogoUrl: RostechLogo,
         nameBlockWidth: 359,
         price: 240000,
         budgetPlaces: 28,
