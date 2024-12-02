@@ -21,7 +21,7 @@ const BackButton: React.FC<IBackButtonProps> = ({
             className={[styles.backButton, className].join(' ')}
             {...others}
         >
-            <Arrow /> <Text>Вернуться назад</Text>
+            <Arrow /> <Text>Вернуться на главную страницу</Text>
         </Button>
     )
 }
