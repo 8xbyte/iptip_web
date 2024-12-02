@@ -83,9 +83,12 @@ const FacultyPage: React.FC = () => {
                         {faculty.institute}
                     </Text>
                     <Text className={styles.bold}>{faculty.name}</Text>
-                    <Text className={styles.description}>
-                        {faculty.description}
-                    </Text>
+                    <Text
+                        className={styles.description}
+                        dangerouslySetInnerHTML={{
+                            __html: faculty.description
+                        }}
+                    />
                 </Block>
                 <Block className={[styles.block, styles.rightBlock].join(' ')}>
                     <Block className={styles.filters}>

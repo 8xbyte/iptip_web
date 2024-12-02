@@ -1,10 +1,10 @@
 .homePage {
     flex-direction: column;
-    gap: 64px;
+    gap: 50px;
 
     .filters {
         gap: 40px;
-
+ 
         .filter {
             padding: 40px 0;
             flex: 1;
@@ -29,7 +29,7 @@
     }
 
     .description {
-        margin-top: -32px;
+        margin-top: -25px;
         font-size: 24px;
         color: #757575;
     }
