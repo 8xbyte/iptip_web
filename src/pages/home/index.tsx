@@ -87,6 +87,10 @@ const HomePage: React.FC = () => {
                     </Block>
                 </Block>
             ) : null}
+            <Text className={styles.description}>
+                *Данные на 2024 г. набора <br /> Актуальные данные появятся в
+                январе 2025 г.
+            </Text>
         </Block>
     )
 }

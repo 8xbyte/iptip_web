@@ -37,9 +37,14 @@ const ThirdTestStep: React.FC = () => {
 
     return (
         <Block className={styles.thirdTestStep}>
-            <Text className={styles.title}>
-                Выберите ЕГЭ, которые планируете сдавать
-            </Text>
+            <Block className={styles.titleBlock}>
+                <Text className={styles.title}>
+                    Выберите ЕГЭ, которые планируете сдавать
+                </Text>
+                <Text className={styles.subTitle}>
+                    (несколько вариантов ответа)
+                </Text>
+            </Block>
             <Block className={styles.filters}>
                 {getFacultiesFilters().map((filter, index) => (
                     <Filter

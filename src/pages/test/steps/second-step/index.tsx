@@ -31,9 +31,14 @@ const SecondTestStep: React.FC = () => {
 
     return (
         <Block className={styles.secondTestStep}>
-            <Text className={styles.title}>
-                Выберите интересующее Вас направление
-            </Text>
+            <Block className={styles.titleBlock}>
+                <Text className={styles.title}>
+                    Выберите ЕГЭ, которые планируете сдавать
+                </Text>
+                <Text className={styles.subTitle}>
+                    (выберите одно или несколько направлений)
+                </Text>
+            </Block>
             <Block className={styles.filters}>
                 <Filter
                     onClick={() => clickFilterHandler('IT-направление')}
