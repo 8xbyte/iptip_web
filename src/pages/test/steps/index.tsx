@@ -114,7 +114,7 @@ const TestSteps: React.FC = () => {
                 </Block>
                 <ArrowButton
                     rightArrow
-                    text='Перейти к следующему вопросу'
+                    text={parseInt(pageId) === 3 ? 'Подтвердить выбор экзаменов' : 'Перейти к следующему вопросу'}
                     onClick={nextPageHandler}
                     className={[
                         styles.pageButton,
