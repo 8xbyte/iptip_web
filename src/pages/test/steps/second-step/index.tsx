@@ -33,7 +33,7 @@ const SecondTestStep: React.FC = () => {
         <Block className={styles.secondTestStep}>
             <Block className={styles.titleBlock}>
                 <Text className={styles.title}>
-                    Выберите ЕГЭ, которые планируете сдавать
+                    Выберите интересующее Вас направление
                 </Text>
                 <Text className={styles.subTitle}>
                     (выберите одно или несколько направлений)
