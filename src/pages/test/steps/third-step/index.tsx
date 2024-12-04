@@ -39,7 +39,7 @@ const ThirdTestStep: React.FC = () => {
         <Block className={styles.thirdTestStep}>
             <Block className={styles.titleBlock}>
                 <Text className={styles.title}>
-                    Выберите ЕГЭ, которые планируете сдавать
+                    Выберите экзамены для поступления
                 </Text>
                 <Text className={styles.subTitle}>
                     (несколько вариантов ответа)
