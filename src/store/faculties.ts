@@ -917,7 +917,8 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 20,
+        id: 24,
+        wide: true,
         passingScore: 45,
         qrUrl: DigitalAndAdditiveTechnologiesInMechanicalEngineeringMasterQr,
         type: 'Магистратура',
@@ -950,7 +951,7 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 24,
+        id: 20,
         passingScore: 95,
         qrUrl: GraphicDesignMasterQr,
         type: 'Магистратура',
