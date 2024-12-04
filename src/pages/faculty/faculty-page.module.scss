@@ -1,6 +1,6 @@
 .facultyPage {
     flex-direction: column;
-    gap: 64px;
+    gap: 46px;
 
     .header {
         gap: 636px;
@@ -81,7 +81,7 @@
                 }
             }
 
-            .description {
+            .data {
                 font-size: 36px;
                 color: #757575;
             }
@@ -177,5 +177,10 @@
         .rightBlock {
             flex: 1;
         }
+    }
+
+    .data {
+        font-size: 36px;
+        color: #757575;
     }
 }

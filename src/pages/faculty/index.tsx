@@ -111,12 +111,14 @@ const FacultyPage: React.FC = () => {
                             </Filter>
                         ) : null}
                     </Block>
-                    {/* faculty.budgetPlaces &&*/ faculty.price ? (
-                        <Text className={styles.description}>
-                            *Данные на 2024 г. набора. <br /> Актуальные данные
-                            появятся в январе 2025 г.
-                        </Text>
-                    ) : null}
+                    {
+                        /* faculty.budgetPlaces &&*/ faculty.price ? (
+                            <Text className={styles.data}>
+                                *Данные на 2024 г. набора. <br /> Актуальные
+                                данные появятся в январе 2025 г.
+                            </Text>
+                        ) : null
+                    }
                 </Block>
             </Block>
             <Block className={styles.examsBlock}>
@@ -194,6 +196,12 @@ const FacultyPage: React.FC = () => {
                     </Block>
                 ) : null}
             </Block>
+            {faculty.budgetPlaces === undefined ? (
+                <Text className={styles.data}>
+                    *Данные на 2024 г. набора. <br /> Актуальные данные появятся
+                    в январе 2025 г.
+                </Text>
+            ) : null}
         </Block>
     ) : null
 }
