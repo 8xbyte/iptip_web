@@ -111,7 +111,7 @@ const FacultyPage: React.FC = () => {
                             </Filter>
                         ) : null}
                     </Block>
-                    {faculty.budgetPlaces && faculty.price ? (
+                    {/* faculty.budgetPlaces &&*/ faculty.price ? (
                         <Text className={styles.description}>
                             *Данные на 2024 г. набора. <br /> Актуальные данные
                             появятся в январе 2025 г.
