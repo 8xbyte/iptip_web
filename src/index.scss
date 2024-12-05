@@ -1,5 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@font-face {
+    font-family: Raleway;
+    src: url("./assets/fonts/Raleway-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url("./assets/fonts/Raleway-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url("./assets/fonts/Raleway-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url("./assets/fonts/Rubik-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url("./assets/fonts/Rubik-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url("./assets/fonts/Rubik-Regular.ttf");
+    font-weight: 400;
+}
 
 * {
     margin: 0;
