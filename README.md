@@ -27,3 +27,4 @@
 - 165% в Windows
 - 50% в Google Chrome (лупа)
 - F11
+- Экран 4651px на 2626px
