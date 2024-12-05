@@ -7,6 +7,7 @@
 <center>
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com) &nbsp;
+[![forthebadge](https://forthebadge.com/images/badges/made-with-react.svg)](https://forthebadge.com) &nbsp;
 
 </center>
 
@@ -24,6 +25,7 @@
 2. In the project directory, you can run: `npm start`
 
 ## Настройка экрана под 55-и дюймовый монитор:
-- 165% в Windows
-- 50% в Google Chrome (лупа)
-- F11
+- <strong>165%</strong> в Windows
+- <strong>50%</strong> в Google Chrome (лупа)
+- <strong>F11</strong>
+- Экран 4651px на 2626px
