@@ -24,6 +24,7 @@ import PhysicsAndTechnologyOfNanosystemsMasterQr from '@/assets/physics-and-tech
 
 import AstraLogo from '@/assets/astra-logo.png'
 import RostechLogo from '@/assets/rostech-logo.svg'
+import OneCLogo from '@/assets/1c-logo.png'
 
 import { IFaculty } from '@/interfaces/faculty'
 
@@ -614,12 +615,14 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 12,
+        id: 14,
         type: 'Бакалавриат',
         date: '09.03.02',
+        wide: true,
         direction: 'IT-направление',
         institute: 'Информационные системы и технологии',
         name: 'Технологии разработки платформенных бизнес-приложений',
+        sponsorLogoUrl: OneCLogo,
         description:
             'В рамках профиля ведётся подготовка специалистов, которые <strong>умеют анализировать требования, предъявляемые к разрабатываемым бизнес-приложениям, дорабатывать типовые конфигурации и также проводить полный цикл разработки бизнес-приложений на основе платформы 1С:Предприятие</strong>. Выпускники способны разрабатывать платформенные бизнес-приложения для автоматизации задач организационного управления и бизнес-процессов',
         exams: [
@@ -703,12 +706,12 @@ const faculties: Array<IFaculty> = [
         ]
     },
     {
-        id: 14,
+        id: 12,
         passingScore: 223,
         qrUrl: DigitalAndAdditiveTechnologiesInMechanicalEngineeringQr,
         type: 'Бакалавриат',
         date: '15.03.01',
-        wide: true,
+        // wide: true,
         direction: 'Инженерное направление',
         institute: 'Машиностроение',
         name: 'Цифровые и аддитивные технологии в машиностроении',
