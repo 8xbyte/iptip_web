@@ -45,8 +45,13 @@ const Faculty: React.FC<IFacultyProps> = ({ faculty, wide = false }) => {
                     </Block>
                     {faculty.sponsorLogoUrl ? (
                         <Block className={styles.sponsorBlock}>
-                            <Text className={styles.text}>Программа реализована при поддержке:</Text>
-                            <Image src={faculty.sponsorLogoUrl} />
+                            <Text className={styles.text}>
+                                Программа реализована при поддержке:
+                            </Text>
+                            <Image
+                                className={styles.sponsorLogo}
+                                src={faculty.sponsorLogoUrl}
+                            />
                         </Block>
                     ) : null}
                 </Block>
