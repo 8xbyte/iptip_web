@@ -11,7 +11,7 @@ export const getFilters = () => {
         filtersBuffer.push(data.firstTestFilter)
     }
     if (data.secondTestFilter) {
-        filtersBuffer.push(data.secondTestFilter)
+        filtersBuffer.push(...data.secondTestFilter)
     }
     filtersBuffer.push(...data.thirdTestFilters)
     return filtersBuffer
