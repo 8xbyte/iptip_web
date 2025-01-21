@@ -104,7 +104,7 @@ const FacultyPage: React.FC = () => {
                         ) : null}
                         {faculty.budgetPlaces !== undefined ? (
                             <Filter selected className={styles.filter}>
-                                {faculty.budgetPlaces} *
+                                {faculty.budgetPlaces} 
                                 <Text className={styles.text}>
                                     бюджетных мест
                                 </Text>
@@ -115,7 +115,7 @@ const FacultyPage: React.FC = () => {
                         /* faculty.budgetPlaces &&*/ faculty.price ? (
                             <Text className={styles.data}>
                                 *Данные на 2024 г. набора. <br /> Актуальные
-                                данные появятся в январе 2025 г.
+                                данные появятся в апреле 2025 г.
                             </Text>
                         ) : null
                     }
@@ -130,7 +130,7 @@ const FacultyPage: React.FC = () => {
                             <Text className={styles.description}>
                                 {exams
                                     .map(
-                                        (exam) => `от ${exam.minScore} баллов *`
+                                        (exam) => `от ${exam.minScore} баллов`
                                     )
                                     .join(' / ')}
                             </Text>
@@ -199,7 +199,7 @@ const FacultyPage: React.FC = () => {
             {faculty.budgetPlaces === undefined ? (
                 <Text className={styles.data}>
                     *Данные на 2024 г. набора. <br /> Актуальные данные появятся
-                    в январе 2025 г.
+                    в апреле 2025 г.
                 </Text>
             ) : null}
         </Block>

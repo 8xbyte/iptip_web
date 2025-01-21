@@ -100,7 +100,7 @@ const Faculty: React.FC<IFacultyProps> = ({ faculty, wide = false }) => {
                 ) : null}
                 {faculty.budgetPlaces !== undefined ? (
                     <Block className={styles.info}>
-                        {`${faculty.budgetPlaces}* — бюджетных мест`}
+                        {`${faculty.budgetPlaces} — бюджетных мест`}
                     </Block>
                 ) : null}
             </Block>
