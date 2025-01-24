@@ -12,6 +12,23 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 import * as styles from './faculty-page.module.scss'
 
+const getBudgetPlacesLabel = (count: number): string => {
+    const forms = ['бюджетное место', 'бюджетных места', 'бюджетных мест'];
+    const absCount = Math.abs(count) % 100;
+    const lastDigit = absCount % 10;
+
+    if (absCount > 10 && absCount < 20) {
+        return forms[2]; // 11-19 — всегда "бюджетных мест"
+    }
+    if (lastDigit > 1 && lastDigit < 5) {
+        return forms[1]; // 2, 3, 4 — "бюджетных места"
+    }
+    if (lastDigit === 1) {
+        return forms[0]; // 1 — "бюджетное место"
+    }
+    return forms[2]; // Остальные — "бюджетных мест"
+};
+
 const FacultyPage: React.FC = () => {
     const { facultyId } = useParams<{
         facultyId: string
@@ -106,7 +123,7 @@ const FacultyPage: React.FC = () => {
                             <Filter selected className={styles.filter}>
                                 {faculty.budgetPlaces} 
                                 <Text className={styles.text}>
-                                    бюджетных мест
+                                    {getBudgetPlacesLabel(faculty.budgetPlaces)}                    
                                 </Text>
                             </Filter>
                         ) : null}

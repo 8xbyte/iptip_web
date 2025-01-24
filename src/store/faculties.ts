@@ -22,7 +22,7 @@ import MetrologicalExpertiseAndAccreditationMasterQr from '@/assets/metrological
 import OpticalTechnologiesMasterQr from '@/assets/optical-technologies-master-qr.svg'
 import PhysicsAndTechnologyOfNanosystemsMasterQr from '@/assets/physics-and-technology-of-nanosystems-master-qr.svg'
 
-import AstraLogo from '@/assets/astra-logo.png'
+import AstraLogo from '@/assets/astra-logo.svg'
 import RostechLogo from '@/assets/rostech-logo.svg'
 import OneCLogo from '@/assets/1c-logo.png'
 
