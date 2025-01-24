@@ -12,7 +12,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 import * as styles from './faculty-page.module.scss'
 
-const getBudgetPlacesLabel = (count: number): string => {
+const getBudgetPlacesLabel = (count: number): string => { // Функция склонения 
     const forms = ['бюджетное место', 'бюджетных места', 'бюджетных мест'];
     const absCount = Math.abs(count) % 100;
     const lastDigit = absCount % 10;
