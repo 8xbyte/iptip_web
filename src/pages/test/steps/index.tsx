@@ -71,6 +71,16 @@ const TestSteps: React.FC = () => {
         }
     }
 
+    const getNextArrowText = (id: number) => {
+        if (id === 2 && data.firstTestFilter === 'Магистратура') {
+            return 'Подтвердить выбор направления'
+        } else if (id === 3) {
+            return 'Подтвердить выбор экзаменов'
+        } else {
+            return 'Перейти к следующему вопросу'
+        }
+    }
+
     return pageId ? (
         <Block className={styles.testSteps}>
             <TestStepsModal
@@ -114,7 +124,7 @@ const TestSteps: React.FC = () => {
                 </Block>
                 <ArrowButton
                     rightArrow
-                    text={parseInt(pageId) === 3 ? 'Подтвердить выбор экзаменов' : 'Перейти к следующему вопросу'}
+                    text={getNextArrowText(parseInt(pageId))}
                     onClick={nextPageHandler}
                     className={[
                         styles.pageButton,
